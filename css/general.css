@@ -1,0 +1,28 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+.outer-container {
+  width: 100vw;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.bg-primary {
+  background-color: #e9f7f3;
+}
+
+br {
+  line-height: 0.1;
+}

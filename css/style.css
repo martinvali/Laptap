@@ -1,0 +1,27 @@
+.header {
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 12rem;
+}
+
+.menu-icon {
+  width: 3.5rem;
+}
+
+.heading-primary-dark {
+  color: #343a40;
+  font-weight: 600;
+  font-size: 3.125rem;
+}
+
+.heading-primary-light {
+  color: #0ca678;
+  font-weight: 700;
+  font-size: 3.125rem;
+}
