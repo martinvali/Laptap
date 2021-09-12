@@ -11,6 +11,16 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
+  color: #495057;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 .outer-container {
