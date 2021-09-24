@@ -33,6 +33,23 @@ img {
   background-color: #e9f7f3;
 }
 
+.bg-white {
+  background-color: #fff;
+}
+
+.subheading {
+  color: #099268;
+  font-size: 1.28rem;
+  font-weight: 600;
+}
+
+.heading-secondary {
+  font-size: 2.5rem;
+  color: #343a40;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+}
+
 br {
   line-height: 0.1;
 }
