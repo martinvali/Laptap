@@ -1,0 +1,14 @@
+@media (min-width: 23.5em) {
+  .heading-primary-light,
+  .heading-primary-dark {
+    font-size: 3.906rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 3rem 0.6rem 3rem;
+  }
+
+  .btn-secondary {
+    padding: 0.6rem 1.5rem 0.6rem 1.5rem;
+  }
+}
