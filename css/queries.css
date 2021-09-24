@@ -11,4 +11,12 @@
   .btn-secondary {
     padding: 0.6rem 1.5rem 0.6rem 1.5rem;
   }
+
+  .heading-secondary {
+    font-size: 3.125rem;
+  }
+
+  .subheading {
+    font-size: 1.6rem;
+  }
 }
