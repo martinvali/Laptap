@@ -60,6 +60,7 @@ img {
   color: #343a40;
   font-weight: 700;
   margin-bottom: 4rem;
+  line-height: 1.4;
 }
 
 .feature-card-icon {
@@ -86,6 +87,36 @@ img {
   font-weight: 500;
 }
 
+.section-benefits-card {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.section-benefits-card:not(:last-of-type) {
+  margin-bottom: 1.6rem;
+}
+
+.benefit-card-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.benefit-card-text {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #343a40;
+}
 br {
   line-height: 0.1;
+}
+
+/* POLYFILLS */
+
+.no-flexbox-gap .feature-card .feature-card-icon {
+  margin-right: 2.5rem;
+}
+
+.no-flexbox-gap .section-benefits-card .benefit-card-img {
+  margin-right: 0.8rem;
 }
