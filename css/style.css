@@ -118,5 +118,11 @@ VERTICAL SPACING:
   margin-bottom: 2.4rem;
 }
 
+/* FEATURES SECTION */
 
-/* 
+.features-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  flex-direction: column;
+  gap: 3.2rem;
+}

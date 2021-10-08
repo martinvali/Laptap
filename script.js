@@ -5,13 +5,16 @@ function checkFlexGap() {
   flex.style.flexDirection = "column";
   flex.style.rowGap = "1px";
 
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
+  const divOne = document.createElement("div");
+  divOne.style.height = "1px";
+  const divTwo = document.createElement("div");
+  divTwo.style.height = "1px";
+  flex.appendChild(divOne);
+  flex.appendChild(divTwo);
 
   document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  console.log(isSupported);
+  var isSupported = flex.scrollHeight === 3;
+  flex.remove();
 
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
