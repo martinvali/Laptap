@@ -123,6 +123,13 @@ VERTICAL SPACING:
 .features-container {
   display: grid;
   grid-template-columns: 1fr;
-  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/* PRODUCING SECTION */
+
+.producing-container {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 3.2rem;
 }
