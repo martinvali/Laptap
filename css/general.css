@@ -41,6 +41,10 @@ img {
   background-color: #e3fafc;
 }
 
+.bg-dark {
+  background-color: #343a40;
+}
+
 .p-top-64 {
   padding-top: 6.4rem;
 }

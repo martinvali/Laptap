@@ -112,7 +112,8 @@ VERTICAL SPACING:
   line-height: 1.75;
 }
 
-.about-img {
+.about-img,
+.product-img {
   max-width: 100%;
   border-radius: 5px;
   margin-bottom: 2.4rem;
@@ -132,4 +133,64 @@ VERTICAL SPACING:
   display: grid;
   grid-template-columns: 1fr;
   gap: 3.2rem;
+}
+
+/* ORDER SECTION */
+
+.product-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #e9faf5;
+  margin-bottom: 0.8rem;
+}
+
+.product-description {
+  color: #e9faf5;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.product-prices {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+
+.product-price {
+  color: #63d9b6;
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.product-price-light {
+  font-size: 1.6rem;
+  color: #e9faf5;
+  font-weight: 500;
+}
+
+.product-price-savings {
+  font-size: 1.28rem;
+  color: #63d9b6;
+  font-weight: 600;
+}
+
+.btn-order {
+  background-color: #63d9b6;
+  width: 100%;
+  text-align: center;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  border-radius: 5px;
+  font-size: 2.5rem;
+  color: #1b5c49;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.order-info {
+  color: #e9faf5;
+  font-size: 1.28rem;
+  text-align: center;
 }
