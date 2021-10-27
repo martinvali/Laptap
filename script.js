@@ -19,4 +19,33 @@ function checkFlexGap() {
   if (!isSupported) document.body.classList.add("no-flexbox-gap");
 }
 
+function onHideFaq(evt) {
+  evt.target.removeEventListener("transitionend", onHideFaq);
+  evt.target.classList.remove("paddingtop");
+}
+
+function faqClick(e) {
+  const questionButton = e.target.closest(".faq-question"); //Find the question button element to expand it so that the answer would become visible
+  const answerText = questionButton.querySelector(".faq-answer");
+  const buttonArrow = questionButton.querySelector("img");
+  answerText.classList.toggle("hidden");
+  answerText.classList.toggle("visible");
+  if (answerText.classList.contains("hidden")) {
+    answerText.style.height = 0;
+    buttonArrow.style.animation = "closeAnimation 0.25s linear";
+    listenerToken = answerText.addEventListener("transitionend", onHideFaq);
+    questionButton.style.animation = "colorDarken 0.25s linear";
+  } else {
+    answerText.classList.add("paddingtop");
+    answerText.style.height = answerText.scrollHeight + "px"; //Reveal the answertext's content
+    buttonArrow.style.animation = "";
+    buttonArrow.style.animation = "openAnimation 0.25s linear";
+    questionButton.style.animation = "colorLighten 0.25s linear";
+  }
+}
+
 checkFlexGap();
+
+const faqContainer = document.querySelector(".faq-questions-container");
+
+faqContainer.addEventListener("click", faqClick);

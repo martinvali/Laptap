@@ -204,3 +204,14 @@ VERTICAL SPACING:
   margin-bottom: 4rem;
   line-height: 1.4;
 }
+
+.faq-questions-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.faq-question-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

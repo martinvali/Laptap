@@ -122,6 +122,35 @@ img {
   color: rgba(9, 146, 104, 0.33);
 }
 
+.faq-question {
+  width: 100%;
+  text-align: left;
+  padding: 1.6rem 0.8rem;
+  border: none;
+  background-color: #ededed;
+  color: #343a40;
+  font-size: 1.28rem;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  border-radius: 6px;
+  animation-fill-mode: forwards !important;
+}
+
+.faq-answer {
+  overflow: hidden;
+  font-weight: 500;
+  transition: height 0.25s linear;
+}
+
+.faq-answer.hidden {
+  height: 0;
+}
+
+.faq-answer.paddingtop {
+  padding-top: 1rem;
+}
+
 br {
   line-height: 0.1;
 }
@@ -134,4 +163,46 @@ br {
 
 .no-flexbox-gap .section-benefits-card .benefit-card-img {
   margin-right: 0.8rem;
+}
+
+.faq-arrow {
+  animation-fill-mode: forwards !important;
+}
+
+@keyframes openAnimation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes closeAnimation {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes colorDarken {
+  from {
+    background-color: #f9faf8;
+  }
+
+  to {
+    background-color: #ededed;
+  }
+}
+
+@keyframes colorLighten {
+  from {
+    background-color: #ededed;
+  }
+
+  to {
+    background-color: #f9faf8;
+  }
 }
