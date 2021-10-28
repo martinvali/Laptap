@@ -228,13 +228,17 @@ VERTICAL SPACING:
 
 /* FOOTER */
 
+.logo-footer {
+  margin-bottom: 1.6rem;
+}
+
 .footer-flex-container {
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 2.4rem;
 }
 
-.footer-contact-info {
+.footer-container {
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
