@@ -1,3 +1,7 @@
+import Glide from "@glidejs/glide";
+
+new Glide(".glide").mount();
+
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
@@ -44,8 +48,9 @@ function faqClick(e) {
   }
 }
 
-checkFlexGap();
-
 const faqContainer = document.querySelector(".faq-questions-container");
 
 faqContainer.addEventListener("click", faqClick);
+
+checkFlexGap();
+scrollToEventListeners();

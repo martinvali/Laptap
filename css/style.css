@@ -112,8 +112,7 @@ VERTICAL SPACING:
   line-height: 1.75;
 }
 
-.about-img,
-.product-img {
+.about-img {
   max-width: 100%;
   border-radius: 5px;
   margin-bottom: 2.4rem;
@@ -242,4 +241,39 @@ VERTICAL SPACING:
   display: flex;
   flex-direction: column;
   gap: 0.2rem;
+}
+
+/* GALLERY */
+
+.gallery {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin-bottom: 2.4rem;
+}
+.product-img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.product-img:not(:last-of-type) {
+  margin-right: 1.2rem;
+}
+
+.button-left {
+  left: 5px;
+  z-index: 1;
+}
+
+.button-right {
+  right: 5px;
+  z-index: 1;
+}
+
+.btn-slider {
+  cursor: pointer;
+  position: absolute;
+  width: 5%;
+  top: 50%;
+  transform: translateY(-50%);
 }

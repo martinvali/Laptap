@@ -14,7 +14,10 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
-    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+    <script defer src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script defer type="module" src="script.js"></script>
   </head>
   <body>
     <header class="header outer-container bg-primary">
@@ -49,7 +52,7 @@
         </p>
 
         <a href="#" class="btn-primary">Tellima</a>
-        <a href="#" class="btn-secondary">Textnr2</a>
+        <a href=".product-img" class="btn-secondary">Galerii</a>
         <img class="hero-img" src="hero.jpg" alt="Pilt meie sülearvutilauast" />
       </section>
 
@@ -220,11 +223,53 @@
         class="section-tellima bg-dark outer-container p-top-64 p-btm-64"
       >
         <div class="ordering-container">
-          <img
-            class="product-img"
-            src="hero.jpg"
-            alt="Pilt meie sülearvutilauast"
-          />
+          <div class="gallery swiper-wrapper" id="gallery" data-glide-el="track" >
+            <span data-glide-el="controls">
+            <img
+              class="button-left btn-slider"
+              data-glide-dir="<"
+              title="Eelmine foto"
+              src="left.svg"
+            ></img>
+            <img
+              class="button-right btn-slider "
+              data-glide-dir=">"
+              title="Järgmine foto"
+              src="right.svg"
+            ></img>
+
+          </span>
+            <img
+              class="product-img swiper-slide"
+              data-index="1"
+              src="hero.jpg"
+              alt="Pilt meie sülearvutilauast"
+            />
+            <img
+              class="product-img swiper-slide"
+              data-index="2"
+              src="hero.jpg"
+              alt="Pilt meie sülearvutilauast"
+            />
+            <img
+              class="product-img swiper-slide"
+              data-index="3"
+              src="hero.jpg"
+              alt="Pilt meie sülearvutilauast"
+            />
+            <img
+              class="product-img swiper-slide"
+              data-index="4"
+              src="hero.jpg"
+              alt="Pilt meie sülearvutilauast"
+            />
+            <img
+              class="product-img swiper-slide"
+              data-index="5"
+              src="hero.jpg"
+              alt="Pilt meie sülearvutilauast"
+            />
+          </div>
           <div class="product-text">
             <h2 class="product-title">Sülearvutilaud</h2>
             <p class="product-description">
