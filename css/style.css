@@ -204,7 +204,11 @@ VERTICAL SPACING:
   margin-bottom: 4rem;
   line-height: 1.4;
 }
-
+.flex-questions-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
 .faq-questions-container {
   display: flex;
   flex-direction: column;
@@ -214,4 +218,24 @@ VERTICAL SPACING:
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.faq-text {
+  font-weight: 500;
+  font-size: 1.28rem;
+  text-align: center;
+}
+
+/* FOOTER */
+
+.footer-flex-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
 }
