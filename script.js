@@ -1,7 +1,3 @@
-import Glide from "@glidejs/glide";
-
-new Glide(".glide").mount();
-
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
@@ -48,8 +44,23 @@ function faqClick(e) {
   }
 }
 
+function hamburgerMenu() {
+  const hamburger = document.querySelector(".menu-icon");
+  const closeHamburgerButton = document.querySelector(".close-button");
+  const navigation = document.querySelector(".navigation-links-container");
+  hamburger.addEventListener("click", function () {
+    navigation.classList.remove("hidden");
+    navigation.classList.add("visible");
+  });
+  closeHamburgerButton.addEventListener("click", function () {
+    navigation.classList.remove("visible");
+    navigation.classList.add("hidden");
+  });
+}
+
 const faqContainer = document.querySelector(".faq-questions-container");
 
 faqContainer.addEventListener("click", faqClick);
 
 checkFlexGap();
+hamburgerMenu();

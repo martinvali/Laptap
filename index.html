@@ -11,14 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
  
-    <script src="@splide.min.js"></script>
 
-    <script defer type="module" src="./dist/output.js"></script>
+    <script defer type="module" src="../script.js"></script>
   </head>
   <body>
     <header class="header outer-container bg-primary">
@@ -38,6 +36,16 @@
             d="M4 6h16M4 12h16M4 18h16"
           />
         </svg>
+      <div class="navigation-links-container hidden">
+        <button class="close-button"><img src="close.svg" alt="close icon"/></button>
+        <ul class="navigation-links">
+          <li class="navigation-link"><a class="navigation-link-anchor" href="#">Meist</a></li>
+          <li class="navigation-link"><a class="navigation-link-anchor" href="#">Tootest</a></li>
+          <li class="navigation-link"><a class="navigation-link-anchor" href="#">Tootmine</a></li>
+          <li class="navigation-link"><a class="navigation-link-anchor" href="#kkk">KKK</a></li>
+          <li class="navigation-link navigation-link-cta"><a class="navigation-link-anchor" href="#kkk">Tellima</a></li>
+        </ul>
+      </div>
       </nav>
     </header>
     <main class="main">
@@ -224,49 +232,49 @@
         class="section-tellima bg-dark outer-container p-top-64 p-btm-64"
       >
         <div class="ordering-container">
-          <div class="gallery glide" id="gallery" data-glide-el="track" >
-            <span data-glide-el="controls">
+          <div class="gallery" id="gallery" >
+            
             <img
               class="button-left btn-slider"
-              data-glide-dir="<"
+              
               title="Eelmine foto"
               src="left.svg"
             ></img>
             <img
               class="button-right btn-slider "
-              data-glide-dir=">"
+             
               title="Järgmine foto"
               src="right.svg"
             ></img>
 
-          </span>
-          <div class="glide__slides">
+          
+          
             <img
-              class="product-img glide__slide"
+              class="product-img"
               data-index="1"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img glide__slide"
+              class="product-img"
               data-index="2"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img glide__slide"
+              class="product-img"
               data-index="3"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img glide__slide"
+              class="product-img"
               data-index="4"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img glide__slide"
+              class="product-img"
               data-index="5"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
@@ -295,7 +303,7 @@
         </div>
       </section>
       <section class="section-faq p-btm-64 p-top-64 outer-container">
-        <h2 class="heading-faq">Korduma kippuvad küsimused</h2>
+        <h2 class="heading-faq" id="kkk">Korduma kippuvad küsimused</h2>
         <div class="flex-questions-text-container">
           <div class="faq-questions-container">
             <button class="faq-question">
