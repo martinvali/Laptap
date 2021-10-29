@@ -127,6 +127,26 @@ VERTICAL SPACING:
   text-align: center;
   display: block;
 }
+
+.navigation-links-desktop {
+  display: flex;
+  flex-direction: row;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.navigation-link-desktop a {
+  color: #343a40;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.navigation-link-cta-desktop a {
+  background-color: #087f5b;
+  padding: 0.8rem 1.6rem;
+  color: #fff;
+  border-radius: 5px;
+}
 /* HERO SECTION */
 
 .section-hero {
@@ -298,9 +318,13 @@ VERTICAL SPACING:
 }
 
 .faq-text {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.28rem;
   text-align: center;
+}
+
+.faq-text-green {
+  color: #0a8561;
 }
 
 /* FOOTER */

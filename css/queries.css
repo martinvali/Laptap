@@ -63,3 +63,28 @@
     height: 28px;
   }
 }
+
+@media (min-width: 38.375em) {
+  .navigation-links-container {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+  }
+
+  .section-benefits-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: start;
+    align-items: baseline;
+    row-gap: 0.8rem;
+  }
+}
+
+@media (min-width: 46.875em) {
+  .menu-icon {
+    display: none;
+  }
+
+  .navigation-links-container {
+    display: none;
+  }
+}
