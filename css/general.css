@@ -16,6 +16,11 @@ body {
   overflow-x: hidden;
 }
 
+body,
+body * {
+  max-height: 1000000px; /* TO DISABLE FONT BOOSTING https://bugs.webkit.org/show_bug.cgi?id=FontBoosting */
+}
+
 a {
   display: inline-block;
   text-decoration: none;

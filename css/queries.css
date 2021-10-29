@@ -77,9 +77,22 @@
     align-items: baseline;
     row-gap: 0.8rem;
   }
+  .order-info {
+    font-size: 1.6rem;
+  }
+
+  .btn-order {
+    margin-bottom: 1.8rem;
+  }
 }
 
 @media (min-width: 46.875em) {
+  .p-top-64 {
+    padding-top: 8rem;
+  }
+  .p-btm-64 {
+    padding-bottom: 8rem;
+  }
   .menu-icon {
     display: none;
   }
@@ -123,5 +136,67 @@
 
   .about-paragraph {
     flex: 1 1 0px;
+  }
+
+  .outer-container {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .section-benefits-container {
+    display: flex;
+    gap: 3.2rem;
+  }
+  .section-benefits-cards {
+    grid-template-columns: 1fr;
+    flex: 1 1 0;
+  }
+  .section-benefits-titles {
+    flex: 1.2 1 0;
+  }
+
+  .section-benefits-cards div.section-benefits-card {
+    margin-bottom: 0;
+  }
+
+  .benefit-card-img {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .producing-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .ordering-container {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+  }
+
+  .gallery {
+    flex: 1.2 1 0;
+  }
+
+  .product-text {
+    flex: 1 1 0;
+  }
+
+  .gallery .product-img {
+    width: 100%;
+  }
+
+  .flex-questions-text-container {
+    gap: 4rem;
   }
 }
