@@ -12,11 +12,54 @@
     padding: 0.6rem 1.5rem 0.6rem 1.5rem;
   }
 
-  .heading-secondary {
+  .heading-secondary,
+  .heading-faq {
     font-size: 3.125rem;
   }
 
   .subheading {
     font-size: 1.6rem;
+  }
+  .faq-text {
+    font-size: 1.6rem;
+  }
+  .flex-questions-text-container {
+    gap: 3.2rem;
+  }
+
+  .close-button {
+    width: 18px;
+    height: 18px;
+    top: 18px;
+    right: 18px;
+  }
+
+  .logo {
+    width: 13rem;
+  }
+
+  .footer-text {
+    font-size: 1.6rem;
+  }
+
+  .footer-contact-icon {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-container {
+    gap: 0.4rem;
+  }
+
+  .faq-question-title {
+    font-size: 1.4rem;
+  }
+
+  .faq-answer {
+    font-size: 1.4rem;
+  }
+  .faq-arrow {
+    width: 28px;
+    height: 28px;
   }
 }

@@ -141,7 +141,7 @@ img {
   color: #343a40;
   font-size: 1.28rem;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   line-height: 1.4;
   border-radius: 6px;
   animation-fill-mode: forwards !important;
