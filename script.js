@@ -37,7 +37,7 @@ function faqClick(e) {
   if (answerText.classList.contains("hidden")) {
     answerText.style.height = 0;
     buttonArrow.style.animation = "closeAnimation 0.25s linear";
-    listenerToken = answerText.addEventListener("transitionend", onHideFaq);
+    answerText.addEventListener("transitionend", onHideFaq);
     questionButton.style.animation = "colorDarken 0.25s linear";
   } else {
     answerText.classList.add("paddingtop");
@@ -53,4 +53,3 @@ const faqContainer = document.querySelector(".faq-questions-container");
 faqContainer.addEventListener("click", faqClick);
 
 checkFlexGap();
-scrollToEventListeners();

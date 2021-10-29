@@ -11,13 +11,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
-    <link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">
-    <script defer src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+ 
+    <script src="@splide.min.js"></script>
 
-    <script defer type="module" src="script.js"></script>
+    <script defer type="module" src="./dist/output.js"></script>
   </head>
   <body>
     <header class="header outer-container bg-primary">
@@ -223,7 +224,7 @@
         class="section-tellima bg-dark outer-container p-top-64 p-btm-64"
       >
         <div class="ordering-container">
-          <div class="gallery swiper-wrapper" id="gallery" data-glide-el="track" >
+          <div class="gallery glide" id="gallery" data-glide-el="track" >
             <span data-glide-el="controls">
             <img
               class="button-left btn-slider"
@@ -239,36 +240,38 @@
             ></img>
 
           </span>
+          <div class="glide__slides">
             <img
-              class="product-img swiper-slide"
+              class="product-img glide__slide"
               data-index="1"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img swiper-slide"
+              class="product-img glide__slide"
               data-index="2"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img swiper-slide"
+              class="product-img glide__slide"
               data-index="3"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img swiper-slide"
+              class="product-img glide__slide"
               data-index="4"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
             <img
-              class="product-img swiper-slide"
+              class="product-img glide__slide"
               data-index="5"
               src="hero.jpg"
               alt="Pilt meie sülearvutilauast"
             />
+          </div>
           </div>
           <div class="product-text">
             <h2 class="product-title">Sülearvutilaud</h2>
