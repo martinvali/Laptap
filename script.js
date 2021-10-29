@@ -48,13 +48,28 @@ function hamburgerMenu() {
   const hamburger = document.querySelector(".menu-icon");
   const closeHamburgerButton = document.querySelector(".close-button");
   const navigation = document.querySelector(".navigation-links-container");
+
+  function closeNavigation() {
+    navigation.classList.remove("visible");
+    navigation.classList.add("hidden");
+  }
   hamburger.addEventListener("click", function () {
     navigation.classList.remove("hidden");
     navigation.classList.add("visible");
   });
-  closeHamburgerButton.addEventListener("click", function () {
-    navigation.classList.remove("visible");
-    navigation.classList.add("hidden");
+
+  closeHamburgerButton.addEventListener("click", closeNavigation);
+  navigation.addEventListener("transitionend", function () {
+    if (this.classList.contains("hidden")) this.style.zIndex = "-1";
+  });
+
+  navigation.addEventListener("transitionstart", function () {
+    if (this.classList.contains("visible")) this.style.zIndex = "1";
+  });
+
+  navigation.addEventListener("click", function (e) {
+    if (e.target.classList.contains("navigation-link-anchor"))
+      closeNavigation();
   });
 }
 
