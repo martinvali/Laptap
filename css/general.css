@@ -26,6 +26,12 @@ a {
   text-decoration: none;
 }
 
+.max-width-container {
+  width: 100%;
+  max-width: 1350px;
+  margin: auto;
+}
+
 img {
   max-width: 100%;
 }
@@ -95,6 +101,11 @@ img {
   align-items: flex-start;
 }
 
+.no-flexbox-gap .feature-card .feature-card-icon {
+  /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+  margin-bottom: 1.6rem;
+}
+
 .feature-card-heading,
 .producing-step-heading {
   font-size: 2rem;
@@ -114,6 +125,11 @@ img {
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+.no-flexbox-gap .section-benefits-card .benefit-card-img {
+  /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+  margin-right: 0.8rem;
 }
 
 .section-benefits-card:not(:last-of-type) {
@@ -168,9 +184,14 @@ img {
 
 .footer-contact {
   display: flex;
-  gap: 0.6rem;
+  gap: 0.4rem;
   align-items: center;
   flex-direction: row;
+}
+
+.no-flexbox-gap .footer-contact-icon {
+  /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+  margin-right: 0.4rem;
 }
 
 .footer-text {
@@ -185,16 +206,6 @@ br {
 
 ul {
   list-style-type: none;
-}
-
-/* POLYFILLS */
-
-.no-flexbox-gap .feature-card .feature-card-icon {
-  margin-bottom: 1.6rem;
-}
-
-.no-flexbox-gap .section-benefits-card .benefit-card-img {
-  margin-right: 0.8rem;
 }
 
 .faq-arrow {

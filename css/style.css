@@ -36,9 +36,6 @@ VERTICAL SPACING:
 .header {
   padding-top: 2rem;
   padding-bottom: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .logo {
@@ -53,6 +50,12 @@ VERTICAL SPACING:
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+header .max-width-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 /* NAVIGATION LINKS (INSIDE HEADER) */
@@ -133,6 +136,11 @@ VERTICAL SPACING:
   flex-direction: row;
   gap: 2.4rem;
   align-items: center;
+}
+
+.no-flexbox-gap .navigation-links-desktop li:not(:last-of-type) {
+  /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+  margin-right: 2.4rem;
 }
 
 .navigation-link-desktop a {
@@ -306,10 +314,20 @@ VERTICAL SPACING:
   flex-direction: column;
   gap: 2.4rem;
 }
+
+.no-flexbox-gap .faq-questions-container {
+  /* POLYFILL FOR THE GAP PROPERY ABOVE */
+  margin-bottom: 2.4rem;
+}
 .faq-questions-container {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
+}
+
+.no-flexbox-gap .faq-question:not(:last-of-type) {
+  /* POLYFILL FOR THE GAP PROPERY ABOVE */
+  margin-bottom: 1.6rem;
 }
 .faq-question-flex {
   display: flex;
@@ -339,10 +357,20 @@ VERTICAL SPACING:
   gap: 2.4rem;
 }
 
+.no-flexbox-gap .footer-container {
+  /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+  margin-bottom: 2.4rem;
+}
+
 .footer-container {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: 0.6rem;
+}
+
+.no-flexbox-gap .footer-text:not(:last-of-type) {
+  /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+  margin-bottom: 0.6rem;
 }
 
 /* GALLERY */

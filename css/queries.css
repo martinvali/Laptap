@@ -27,6 +27,11 @@
     gap: 3.2rem;
   }
 
+  .no-flexbox-gap .faq-questions-container {
+    /* POLYFILL FOR THE GAP PROPERY ABOVE */
+    margin-bottom: 3.2rem;
+  }
+
   .close-button {
     width: 18px;
     height: 18px;
@@ -45,10 +50,6 @@
   .footer-contact-icon {
     width: 25px;
     height: 25px;
-  }
-
-  .footer-container {
-    gap: 0.4rem;
   }
 
   .faq-question-title {
@@ -77,21 +78,39 @@
     align-items: baseline;
     row-gap: 0.8rem;
   }
-  .order-info {
-    font-size: 1.6rem;
-  }
 
   .btn-order {
     margin-bottom: 1.8rem;
   }
+
+  .faq-question-title,
+  .faq-answer {
+    font-size: 1.6rem;
+  }
+
+  .faq-arrow {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 @media (min-width: 46.875em) {
+  .order-info {
+    font-size: 1.6rem;
+  }
   .p-top-64 {
     padding-top: 8rem;
   }
   .p-btm-64 {
     padding-bottom: 8rem;
+  }
+
+  .p-top-48 {
+    padding-top: 6.4rem;
+  }
+
+  .p-btm-48 {
+    padding-bottom: 6.4rem;
   }
   .menu-icon {
     display: none;
@@ -105,10 +124,15 @@
     display: flex;
   }
 
-  .section-hero {
+  .section-hero .max-width-container {
     display: flex;
     align-items: flex-start;
     gap: 2.4rem;
+  }
+
+  .no-flexbox-gap .hero-text-container {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 2.4rem;
   }
 
   .hero-img-container {
@@ -129,6 +153,10 @@
     gap: 2.4rem;
   }
 
+  .no-flexbox-gap .about-img-container {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 2.4rem;
+  }
   .about-img-container {
     max-width: 100%;
     flex: 1 1 0px;
@@ -146,6 +174,11 @@
   .section-benefits-container {
     display: flex;
     gap: 3.2rem;
+  }
+
+  .no-flexbox-gap .section-benefits-titles {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 3.2rem;
   }
   .section-benefits-cards {
     grid-template-columns: 1fr;
@@ -184,6 +217,11 @@
     gap: 3.2rem;
   }
 
+  .no-flexbox-gap .gallery {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 3.2rem;
+  }
+
   .gallery {
     flex: 1.2 1 0;
   }
@@ -198,5 +236,211 @@
 
   .flex-questions-text-container {
     gap: 4rem;
+  }
+  .no-flexbox-gap .faq-questions-container {
+    /* POLYFILL FOR THE GAP PROPERY ABOVE */
+    margin-bottom: 4rem;
+  }
+
+  .flex-questions-text-container {
+    flex-direction: row;
+  }
+
+  .faq-text {
+    order: 1;
+  }
+
+  .faq-text,
+  .faq-text-green {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  .faq-questions-container {
+    order: 2;
+  }
+
+  .no-flexbox-gap .faq-text {
+    margin-right: 4rem;
+  }
+
+  .no-flexbox-gap .faq-questions-container {
+    margin-bottom: 0;
+  }
+  .footer-text {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 59.375em) {
+  .section-hero .max-width-container {
+    gap: 3.2rem;
+  }
+
+  .no-flexbox-gap .hero-text-container {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 3.2rem;
+  }
+  .about-flex {
+    display: flex;
+    gap: 3.2rem;
+  }
+
+  .no-flexbox-gap .about-img-container {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 3.2rem;
+  }
+  .header {
+    padding-top: 3.2rem;
+  }
+  .outer-container {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  .heading-primary-dark,
+  .heading-primary-light {
+    font-size: 4.883rem;
+  }
+
+  .heading-primary-paragraph {
+    font-size: 2.5rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    font-size: 2.5rem;
+  }
+
+  .p-top-64 {
+    padding-top: 9.6rem;
+  }
+
+  .p-btm-64 {
+    padding-bottom: 9.6rem;
+  }
+
+  .p-top-48 {
+    padding-top: 8rem;
+  }
+
+  .p-btm-48 {
+    padding-bottom: 8rem;
+  }
+
+  .subheading {
+    font-size: 2rem;
+  }
+  .heading-secondary {
+    font-size: 3.906rem;
+  }
+
+  .section-hero {
+    padding-top: 11.2rem;
+  }
+
+  .about-paragraph {
+    font-size: 2rem;
+  }
+
+  .benefit-card-img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .benefit-card-text {
+    font-size: 2rem;
+  }
+  .section-benefits-card {
+    gap: 1.2rem;
+  }
+
+  .no-flexbox-gap .section-benefits-card:not(:last-of-type) {
+    margin-bottom: 1.2rem;
+  }
+
+  .features-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .heading-secondary {
+    margin-bottom: 6.4rem;
+  }
+
+  .producing-container {
+    row-gap: 2.4rem;
+  }
+}
+
+@media (min-width: 71.875em) {
+  .ordering-container {
+    gap: 4.8rem;
+  }
+
+  .no-flexbox-gap .gallery {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 4.8rem;
+  }
+  .section-hero .max-width-container {
+    gap: 4.8rem;
+  }
+
+  .no-flexbox-gap .hero-text-container {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 4.8rem;
+  }
+  .about-flex {
+    display: flex;
+    gap: 4.8rem;
+  }
+
+  .no-flexbox-gap .about-img-container {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 4.8rem;
+  }
+  .section-hero {
+    padding-top: 14rem;
+  }
+  .logo {
+    width: 16rem;
+  }
+  .footer-flex-container {
+    flex-direction: row;
+  }
+
+  .footer-contact {
+    gap: 0.8rem;
+  }
+
+  .no-flexbox-gap .footer-contact-icon {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 0.8rem;
+  }
+
+  .footer-container {
+    gap: 0.8rem;
+  }
+
+  .no-flexbox-gap .footer-text:not(:last-of-type) {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-bottom: 0.8rem;
+  }
+
+  .footer-flex-container {
+    gap: 4rem;
+  }
+
+  .producing-container {
+    gap: 6.4rem;
+  }
+
+  .producing-step-number {
+    font-size: 3.906rem;
+  }
+
+  .producing-step-heading {
+    font-size: 2.5rem;
+  }
+  .producing-step-description {
+    font-size: 2rem;
   }
 }

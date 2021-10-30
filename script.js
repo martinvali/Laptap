@@ -56,15 +56,12 @@ function hamburgerMenu() {
   hamburger.addEventListener("click", function () {
     navigation.classList.remove("hidden");
     navigation.classList.add("visible");
+    navigation.style.zIndex = "1";
   });
 
   closeHamburgerButton.addEventListener("click", closeNavigation);
   navigation.addEventListener("transitionend", function () {
     if (this.classList.contains("hidden")) this.style.zIndex = "-1";
-  });
-
-  navigation.addEventListener("transitionstart", function () {
-    if (this.classList.contains("visible")) this.style.zIndex = "1";
   });
 
   navigation.addEventListener("click", function (e) {
