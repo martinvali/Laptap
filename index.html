@@ -11,102 +11,138 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
- 
+    <link rel="stylesheet" type="text/css" href="./css/glider.css" />
+
+    <script defer src="glider.js"></script>
 
     <script defer type="module" src="../script.js"></script>
   </head>
   <body>
     <header class="header outer-container bg-primary">
       <div class="max-width-container">
-      <img src="logo1.svg" class="logo" alt="Laptap logo" />
-      <nav class="nav">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="menu-icon"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      <div class="navigation-links-container hidden">
-        <button class="close-button"><img src="close.svg" alt="close icon"/></button>
-        <ul class="navigation-links">
-          <li class="navigation-link"><a class="navigation-link-anchor" href="#meist">Meist</a></li>
-          <li class="navigation-link"><a class="navigation-link-anchor" href="#tootest">Tootest</a></li>
-          <li class="navigation-link"><a class="navigation-link-anchor" href="#tootmine">Tootmine</a></li>
-          <li class="navigation-link"><a class="navigation-link-anchor" href="#kkk">KKK</a></li>
-          <li class="navigation-link navigation-link-cta"><a class="navigation-link-anchor" href="#tellima">Tellima</a></li>
-        </ul>
-      </div>
+        <img src="logo1.svg" class="logo" alt="Laptap logo" />
+        <nav class="nav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="menu-icon"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <div class="navigation-links-container hidden">
+            <button class="close-button">
+              <img src="close.svg" alt="close icon" />
+            </button>
+            <ul class="navigation-links">
+              <li class="navigation-link">
+                <a class="navigation-link-anchor" href="#meist">Meist</a>
+              </li>
+              <li class="navigation-link">
+                <a class="navigation-link-anchor" href="#tootest">Tootest</a>
+              </li>
+              <li class="navigation-link">
+                <a class="navigation-link-anchor" href="#tootmine">Tootmine</a>
+              </li>
+              <li class="navigation-link">
+                <a class="navigation-link-anchor" href="#kkk">KKK</a>
+              </li>
+              <li class="navigation-link navigation-link-cta">
+                <a class="navigation-link-anchor" href="#tellima">Tellima</a>
+              </li>
+            </ul>
+          </div>
 
-      
-        <ul class="navigation-links-desktop">
-          <li class="navigation-link-desktop"><a class="navigation-link-anchor-desktop" href="#meist">Meist</a></li>
-          <li class="navigation-link-desktop"><a class="navigation-link-anchor-desktop" href="#tootest">Tootest</a></li>
-          <li class="navigation-link-desktop"><a class="navigation-link-anchor-desktop" href="#tootmine">Tootmine</a></li>
-          <li class="navigation-link-desktop"><a class="navigation-link-anchor-desktop" href="#kkk">KKK</a></li>
-          <li class="navigation-link-desktop navigation-link-cta-desktop"><a class="navigation-link-anchor-desktop" href="#tellima">Tellima</a></li>
-        </ul>
-      </nav>
-    </div>
+          <ul class="navigation-links-desktop">
+            <li class="navigation-link-desktop">
+              <a class="navigation-link-anchor-desktop" href="#meist">Meist</a>
+            </li>
+            <li class="navigation-link-desktop">
+              <a class="navigation-link-anchor-desktop" href="#tootest"
+                >Tootest</a
+              >
+            </li>
+            <li class="navigation-link-desktop">
+              <a class="navigation-link-anchor-desktop" href="#tootmine"
+                >Tootmine</a
+              >
+            </li>
+            <li class="navigation-link-desktop">
+              <a class="navigation-link-anchor-desktop" href="#kkk">KKK</a>
+            </li>
+            <li class="navigation-link-desktop navigation-link-cta-desktop">
+              <a class="navigation-link-anchor-desktop" href="#tellima"
+                >Tellima</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main class="main">
       <section class="section-hero bg-primary outer-container p-btm-64">
-      <div class="max-width-container">
-      <div class="hero-text-container">
-        <h1 class="heading-primary-dark">
-          Eestimaised<br>
-          <span class="heading-primary-light">Sülearvutilauad</span>
-        </h1>
-
-        <p class="heading-primary-paragraph">
-          Kaitske oma arvutit ülekuumenemise, määrdumise ning eluea vähenemise
-          eest. Hoidke kokku hoolduskuludelt.
-        </p>
-
-        <a href="#tellima" class="btn-primary">Tellima</a>
-        <a href="#tellima" class="btn-secondary">Galerii</a>
-      </div>
-      <div class="hero-img-container">
-        <img class="hero-img" src="hero.jpg" alt="Pilt meie sülearvutilauast" />
-      </div>
-      </div>
-      </section>
-
-      <section class="section-about bg-white outer-container p-btm-64 p-top-64" id="meist">
         <div class="max-width-container">
-        <p class="subheading">Tutvustus</p>
-        <h2 class="heading-secondary">Meie õpilasfirmast</h2>
-        <div class="about-flex">
-        <div class="about-img-container">
-        <img
-          class="about-img"
-          src="hero.jpg"
-          alt="Pilt meie sülearvutilauast"
-        />
-      </div>
-        <p class="about-paragraph">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt,
-          molestias. Veniam eaque molestiae odio itaque quo, numquam ab ea
-          libero. Cumque impedit iste consequuntur excepturi provident nihil
-          nobis porro commodi.
-        </p>
-      </div>
-    </div>
+          <div class="hero-text-container">
+            <h1 class="heading-primary-dark">
+              Eestimaised<br />
+              <span class="heading-primary-light">Sülearvutilauad</span>
+            </h1>
+
+            <p class="heading-primary-paragraph">
+              Kaitske oma arvutit ülekuumenemise, määrdumise ning eluea
+              vähenemise eest. Hoidke kokku hoolduskuludelt.
+            </p>
+
+            <a href="#tellima" class="btn-primary">Tellima</a>
+            <a href="#tellima" class="btn-secondary">Galerii</a>
+          </div>
+          <div class="hero-img-container">
+            <img
+              class="hero-img"
+              src="hero.jpg"
+              alt="Pilt meie sülearvutilauast"
+            />
+          </div>
+        </div>
       </section>
 
       <section
-        class="section-benefits bg-blueish outer-container p-btm-64 p-top-64" 
+        class="section-about bg-white outer-container p-btm-64 p-top-64"
+        id="meist"
+      >
+        <div class="max-width-container">
+          <p class="subheading">Tutvustus</p>
+          <h2 class="heading-secondary">Meie õpilasfirmast</h2>
+          <div class="about-flex">
+            <div class="about-img-container">
+              <img
+                class="about-img"
+                src="hero.jpg"
+                alt="Pilt meie sülearvutilauast"
+              />
+            </div>
+            <p class="about-paragraph">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
+              numquam ab ea libero. Cumque impedit iste consequuntur excepturi
+              provident nihil nobis porro commodi.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="section-benefits bg-blueish outer-container p-btm-64 p-top-64"
       >
         <div class="section-benefits-container max-width-container">
           <div class="section-benefits-titles">
@@ -137,176 +173,153 @@
       </section>
 
       <section
-        class="section-tootest bg-white outer-container p-top-64 p-btm-64" id="tootest"
+        class="section-tootest bg-white outer-container p-top-64 p-btm-64"
+        id="tootest"
       >
-      <div class="max-width-container">
-        <p class="subheading">Tootest</p>
-        <h2 class="heading-secondary">Kompaktsed sülearvutilauad</h2>
-        <div class="features-container">
-          <div class="feature-card">
-            <img
-              class="feature-card-icon"
-              src="leaf.svg"
-              alt="Environmentally-friendly icon"
-            />
-            <div class="feature-card-text">
-              <p class="feature-card-heading">Keskkonnasõbralik</p>
-              <p class="feature-card-description">
-                Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
-                läinud äraviskamisele.
-              </p>
+        <div class="max-width-container">
+          <p class="subheading">Tootest</p>
+          <h2 class="heading-secondary">Kompaktsed sülearvutilauad</h2>
+          <div class="features-container">
+            <div class="feature-card">
+              <img
+                class="feature-card-icon"
+                src="leaf.svg"
+                alt="Environmentally-friendly icon"
+              />
+              <div class="feature-card-text">
+                <p class="feature-card-heading">Keskkonnasõbralik</p>
+                <p class="feature-card-description">
+                  Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
+                  läinud äraviskamisele.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <img
+                class="feature-card-icon"
+                src="compact.svg"
+                alt="Environmentally-friendly icon"
+              />
+              <div class="feature-card-text">
+                <p class="feature-card-heading">Kompaktne</p>
+                <p class="feature-card-description">
+                  Kuna laud on kokkuvolditav, saab seda imelihtsalt hoiustada ja
+                  vajadusel kaasas kanda.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <img
+                class="feature-card-icon"
+                src="leaf.svg"
+                alt="Environmentally-friendly icon"
+              />
+              <div class="feature-card-text">
+                <p class="feature-card-heading">Keskkonnasõbralik</p>
+                <p class="feature-card-description">
+                  Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
+                  läinud äraviskamisele.
+                </p>
+              </div>
+            </div>
+
+            <div class="feature-card">
+              <img
+                class="feature-card-icon"
+                src="leaf.svg"
+                alt="Environmentally-friendly icon"
+              />
+              <div class="feature-card-text">
+                <p class="feature-card-heading">Keskkonnasõbralik</p>
+                <p class="feature-card-description">
+                  Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
+                  läinud äraviskamisele.
+                </p>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div class="feature-card">
-            <img
-              class="feature-card-icon"
-              src="compact.svg"
-              alt="Environmentally-friendly icon"
-            />
-            <div class="feature-card-text">
-              <p class="feature-card-heading">Kompaktne</p>
-              <p class="feature-card-description">
-                Kuna laud on kokkuvolditav, saab seda imelihtsalt hoiustada ja
-                vajadusel kaasas kanda.
+      <section
+        class="section-tootmine bg-primary outer-container p-top-64 p-btm-64"
+        id="tootmine"
+      >
+        <div class="max-width-container">
+          <p class="subheading">Tootmine</p>
+          <h2 class="heading-secondary">Kuidas teie laud valmib?</h2>
+
+          <div class="producing-container">
+            <div class="producing-step">
+              <p class="producing-step-number">01</p>
+              <p class="producing-step-heading">Materjali valimine</p>
+              <p class="producing-step-description">
+                Valime teie laua jaoks välja sobivad vineeritükid. Kasutame
+                võimalikult suures osas vineerijääke, mis on kvaliteedilt
+                võrdsed uuele vineerile, kuid mis oleksid vastasel juhul läinud
+                äraviskamisele.
               </p>
             </div>
-          </div>
 
-          <div class="feature-card">
-            <img
-              class="feature-card-icon"
-              src="leaf.svg"
-              alt="Environmentally-friendly icon"
-            />
-            <div class="feature-card-text">
-              <p class="feature-card-heading">Keskkonnasõbralik</p>
-              <p class="feature-card-description">
-                Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
-                läinud äraviskamisele.
+            <div class="producing-step">
+              <p class="producing-step-number">02</p>
+              <p class="producing-step-heading">Töötlus</p>
+              <p class="producing-step-description">
+                Vineeritükid läbivad CNC freesimise ja laserlõikuse. (lakk, õli
+                värv vms teeme ka?).
               </p>
             </div>
-          </div>
 
-          <div class="feature-card">
-            <img
-              class="feature-card-icon"
-              src="leaf.svg"
-              alt="Environmentally-friendly icon"
-            />
-            <div class="feature-card-text">
-              <p class="feature-card-heading">Keskkonnasõbralik</p>
-              <p class="feature-card-description">
-                Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
-                läinud äraviskamisele.
+            <div class="producing-step">
+              <p class="producing-step-number">03</p>
+              <p class="producing-step-heading">Monteerimine</p>
+              <p class="producing-step-description">
+                Lõigatud vineeritükid monteeritakse käsitsi meie õpilasfirma
+                liikmete poolt. Seejärel toimub toote kvaliteedikontroll ning
+                toode pakendatakse.
+              </p>
+            </div>
+
+            <div class="producing-step">
+              <p class="producing-step-number">04</p>
+              <p class="producing-step-heading">Müük ja transport</p>
+              <p class="producing-step-description">
+                Teie laud on valmis kasutamiseks ning transporditakse soovitud
+                asukohta.
               </p>
             </div>
           </div>
         </div>
-      </div>
       </section>
 
       <section
-        class="section-tootmine bg-primary outer-container p-top-64 p-btm-64" id="tootmine"
-      >
-      <div class="max-width-container">
-        <p class="subheading">Tootmine</p>
-        <h2 class="heading-secondary">Kuidas teie laud valmib?</h2>
-
-        <div class="producing-container">
-          <div class="producing-step">
-            <p class="producing-step-number">01</p>
-            <p class="producing-step-heading">Materjali valimine</p>
-            <p class="producing-step-description">
-              Valime teie laua jaoks välja sobivad vineeritükid. Kasutame
-              võimalikult suures osas vineerijääke, mis on kvaliteedilt võrdsed
-              uuele vineerile, kuid mis oleksid vastasel juhul läinud
-              äraviskamisele.
-            </p>
-          </div>
-
-          <div class="producing-step">
-            <p class="producing-step-number">02</p>
-            <p class="producing-step-heading">Töötlus</p>
-            <p class="producing-step-description">
-              Vineeritükid läbivad CNC freesimise ja laserlõikuse. (lakk, õli
-              värv vms teeme ka?).
-            </p>
-          </div>
-
-          <div class="producing-step">
-            <p class="producing-step-number">03</p>
-            <p class="producing-step-heading">Monteerimine</p>
-            <p class="producing-step-description">
-              Lõigatud vineeritükid monteeritakse käsitsi meie õpilasfirma
-              liikmete poolt. Seejärel toimub toote kvaliteedikontroll ning
-              toode pakendatakse.
-            </p>
-          </div>
-
-          <div class="producing-step">
-            <p class="producing-step-number">04</p>
-            <p class="producing-step-heading">Müük ja transport</p>
-            <p class="producing-step-description">
-              Teie laud on valmis kasutamiseks ning transporditakse soovitud
-              asukohta.
-            </p>
-          </div>
-        </div>
-      </div>
-      </section>
-
-      <section
-        class="section-tellima bg-dark outer-container p-top-64 p-btm-64" id="tellima"
+        class="section-tellima bg-dark outer-container p-top-64 p-btm-64"
+        id="tellima"
       >
         <div class="ordering-container max-width-container">
-          <div class="gallery" id="gallery" >
-            
-            <img
-              class="button-left btn-slider"
-              
-              title="Eelmine foto"
-              src="left.svg"
-            ></img>
-            <img
-              class="button-right btn-slider "
-             
-              title="Järgmine foto"
-              src="right.svg"
-            ></img>
-
-          
-          
-            <img
-              class="product-img"
-              data-index="1"
-              src="hero.jpg"
-              alt="Pilt meie sülearvutilauast"
-            />
-            <img
-              class="product-img"
-              data-index="2"
-              src="hero.jpg"
-              alt="Pilt meie sülearvutilauast"
-            />
-            <img
-              class="product-img"
-              data-index="3"
-              src="hero.jpg"
-              alt="Pilt meie sülearvutilauast"
-            />
-            <img
-              class="product-img"
-              data-index="4"
-              src="hero.jpg"
-              alt="Pilt meie sülearvutilauast"
-            />
-            <img
-              class="product-img"
-              data-index="5"
-              src="hero.jpg"
-              alt="Pilt meie sülearvutilauast"
-            />
+          <div class="glider-contain" id="gallery">
+            <div class="glider">
+              <img
+                class="product-img"
+                data-index="1"
+                src="hero.jpg"
+                alt="Pilt meie sülearvutilauast"
+              />
+              <img
+                class="product-img"
+                data-index="2"
+                src="hero.jpg"
+                alt="Pilt meie sülearvutilauast"
+              />
+            </div>
+            <button aria-label="Previous" class="glider-prev">
+              <img src="left.svg" alt="Previous image icon" />
+            </button>
+            <button aria-label="Next" class="glider-next">
+              <img src="right.svg" alt="Next image icon" />
+            </button>
           </div>
           <div class="product-text">
             <h2 class="product-title">Sülearvutilaud</h2>
@@ -328,124 +341,141 @@
             </p>
           </div>
         </div>
-          
       </section>
       <section class="section-faq p-btm-64 p-top-64 outer-container" id="kkk">
         <div class="max-width-container">
-        <h2 class="heading-faq">Korduma kippuvad küsimused</h2>
-        <div class="flex-questions-text-container">
-          <div class="faq-questions-container">
-            <button class="faq-question">
-              <div class="faq-question-flex">
-                <p class="faq-question-title">Kui kaua aega kulub toote transpordiks?</p>
-                <img
-                  src="downarrow.svg"
-                  alt="Downarrow to open a frequently asked question."
-                  class="faq-arrow"
-                />
-              </div>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
-                numquam ab ea libero. Cumque impedit iste consequuntur excepturi
-                provident nihil nobis porro commodi.
-              </p>
-            </button>
+          <h2 class="heading-faq">Korduma kippuvad küsimused</h2>
+          <div class="flex-questions-text-container">
+            <div class="faq-questions-container">
+              <button class="faq-question">
+                <div class="faq-question-flex">
+                  <p class="faq-question-title">
+                    Kui kaua aega kulub toote transpordiks?
+                  </p>
+                  <img
+                    src="downarrow.svg"
+                    alt="Downarrow to open a frequently asked question."
+                    class="faq-arrow"
+                  />
+                </div>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
+                  numquam ab ea libero. Cumque impedit iste consequuntur
+                  excepturi provident nihil nobis porro commodi.
+                </p>
+              </button>
 
-            <button class="faq-question">
-              <div class="faq-question-flex">
-                <p class="faq-question-title">Kui kaua aega kulub toote transpordiks?</p>
-                <img
-                  src="downarrow.svg"
-                  alt="Downarrow to open a frequently asked question."
-                  class="faq-arrow"
-                />
-              </div>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
-                numquam ab ea libero. Cumque impedit iste consequuntur excepturi
-                provident nihil nobis porro commodi.
-              </p>
-            </button>
+              <button class="faq-question">
+                <div class="faq-question-flex">
+                  <p class="faq-question-title">
+                    Kui kaua aega kulub toote transpordiks?
+                  </p>
+                  <img
+                    src="downarrow.svg"
+                    alt="Downarrow to open a frequently asked question."
+                    class="faq-arrow"
+                  />
+                </div>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
+                  numquam ab ea libero. Cumque impedit iste consequuntur
+                  excepturi provident nihil nobis porro commodi.
+                </p>
+              </button>
 
-            <button class="faq-question">
-              <div class="faq-question-flex">
-                <p class="faq-question-title">Kui kaua aega kulub toote transpordiks?</p>
-                <img
-                  src="downarrow.svg"
-                  alt="Downarrow to open a frequently asked question."
-                  class="faq-arrow"
-                />
-              </div>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
-                numquam ab ea libero. Cumque impedit iste consequuntur excepturi
-                provident nihil nobis porro commodi.
-              </p>
-            </button>
+              <button class="faq-question">
+                <div class="faq-question-flex">
+                  <p class="faq-question-title">
+                    Kui kaua aega kulub toote transpordiks?
+                  </p>
+                  <img
+                    src="downarrow.svg"
+                    alt="Downarrow to open a frequently asked question."
+                    class="faq-arrow"
+                  />
+                </div>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
+                  numquam ab ea libero. Cumque impedit iste consequuntur
+                  excepturi provident nihil nobis porro commodi.
+                </p>
+              </button>
 
-            <button class="faq-question">
-              <div class="faq-question-flex">
-                <p class="faq-question-title">Kui kaua aega kulub toote transpordiks?</p>
-                <img
-                  src="downarrow.svg"
-                  alt="Downarrow to open a frequently asked question."
-                  class="faq-arrow"
-                />
-              </div>
-              <p class="faq-answer hidden">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
-                numquam ab ea libero. Cumque impedit iste consequuntur excepturi
-                provident nihil nobis porro commodi.
-              </p>
-            </button>
+              <button class="faq-question">
+                <div class="faq-question-flex">
+                  <p class="faq-question-title">
+                    Kui kaua aega kulub toote transpordiks?
+                  </p>
+                  <img
+                    src="downarrow.svg"
+                    alt="Downarrow to open a frequently asked question."
+                    class="faq-arrow"
+                  />
+                </div>
+                <p class="faq-answer hidden">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
+                  numquam ab ea libero. Cumque impedit iste consequuntur
+                  excepturi provident nihil nobis porro commodi.
+                </p>
+              </button>
+            </div>
+            <p class="faq-text">
+              Kui su küsimus jääb vastuseta,
+              <span class="faq-text-green"
+                >võta meiega julgelt ühendust telefonil x või emailil x.</span
+              >
+            </p>
           </div>
-          <p class="faq-text">
-            Kui su küsimus jääb vastuseta,
-            <span class="faq-text-green"
-              >võta meiega julgelt ühendust telefonil x või emailil x.</span
-            >
-          </p>
         </div>
-      </div>
       </section>
     </main>
     <footer class="footer outer-container bg-primary p-btm-48 p-top-48">
       <div class="max-width-container">
-      <img src="logo1.svg" class="logo logo-footer" alt="Laptap logo" />
-      <div class="footer-flex-container">
-        <div class="footer-container">
-          <div class="footer-contact">
-            <img
-              src="school.svg"
-              class="footer-contact-icon"
-              alt="school icon"
-            />
-            <p class="footer-text">Tallinna Lilleküla Gümnaasium</p>
+        <img src="logo1.svg" class="logo logo-footer" alt="Laptap logo" />
+        <div class="footer-flex-container">
+          <div class="footer-container">
+            <div class="footer-contact">
+              <img
+                src="school.svg"
+                class="footer-contact-icon"
+                alt="school icon"
+              />
+              <p class="footer-text">Tallinna Lilleküla Gümnaasium</p>
+            </div>
+            <div class="footer-contact">
+              <img
+                src="call.svg"
+                class="footer-contact-icon"
+                alt="phone icon"
+              />
+              <a class="footer-text" href="tel:+37256843090"
+                >+372 595 959 595</a
+              >
+            </div>
+            <div class="footer-contact">
+              <img
+                src="email.svg"
+                class="footer-contact-icon"
+                alt="email icon"
+              />
+              <a class="footer-text" href="mailto:tere@laptap.com"
+                >tere@laptap.com</a
+              >
+            </div>
           </div>
-          <div class="footer-contact">
-            <img src="call.svg" class="footer-contact-icon" alt="phone icon" />
-            <a class="footer-text" href="tel:+37256843090">+372 595 959 595</a>
+          <div class="footer-container">
+            <a href="#" class="footer-text">Müügi- ja tagastustingimused</a>
+            <a href="#" class="footer-text">Privaatsuspoliitika</a>
           </div>
-          <div class="footer-contact">
-            <img src="email.svg" class="footer-contact-icon" alt="email icon" />
-            <a class="footer-text" href="mailto:tere@laptap.com"
-              >tere@laptap.com</a
-            >
-          </div>
+          <p class="footer-text">
+            Copyright © 2021 Laptap. Kõik õigused kaitstud.
+          </p>
         </div>
-        <div class="footer-container">
-          <a href="#" class="footer-text">Müügi- ja tagastustingimused</a>
-          <a href="#" class="footer-text">Privaatsuspoliitika</a>
-        </div>
-        <p class="footer-text">
-          Copyright © 2021 Laptap. Kõik õigused kaitstud.
-        </p>
       </div>
-    </div>
     </footer>
   </body>
 </html>

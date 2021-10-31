@@ -350,13 +350,6 @@
   .benefit-card-text {
     font-size: 2rem;
   }
-  .section-benefits-card {
-    gap: 1.2rem;
-  }
-
-  .no-flexbox-gap .section-benefits-card:not(:last-of-type) {
-    margin-bottom: 1.2rem;
-  }
 
   .features-container {
     grid-template-columns: repeat(4, 1fr);
@@ -368,6 +361,18 @@
 
   .producing-container {
     row-gap: 2.4rem;
+  }
+
+  .navigation-links-desktop {
+    gap: 3.2rem;
+  }
+  .no-flexbox-gap .navigation-links-desktop li:not(:last-of-type) {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 3.2rem;
+  }
+
+  .navigation-link-cta-desktop a {
+    padding: 0.8rem 3.2rem;
   }
 }
 
@@ -442,5 +447,38 @@
   }
   .producing-step-description {
     font-size: 2rem;
+  }
+
+  .benefit-card-text {
+    font-size: 2.5rem;
+  }
+
+  .benefit-card-img {
+    width: 3.8rem;
+    height: 3.8rem;
+  }
+
+  .section-benefits-card {
+    gap: 1.4rem;
+  }
+  .no-flexbox-gap .section-benefits-card .benefit-card-img {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 1.4rem;
+  }
+
+  .section-benefits-cards {
+    row-gap: 1.6rem;
+  }
+
+  .heading-secondary {
+    margin-bottom: 8rem;
+  }
+
+  .navigation-links-desktop {
+    gap: 3.8rem;
+  }
+  .no-flexbox-gap .navigation-links-desktop li:not(:last-of-type) {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 3.8rem;
   }
 }
