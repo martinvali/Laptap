@@ -15,11 +15,12 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/queries.css" />
-    <link rel="stylesheet" type="text/css" href="./css/glider.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
 
-    <script defer src="glider.js"></script>
-
-    <script defer type="module" src="../script.js"></script>
+    <script defer type="module" src="./dist/script.js"></script>
   </head>
   <body>
     <header class="header outer-container bg-primary">
@@ -299,27 +300,45 @@
         id="tellima"
       >
         <div class="ordering-container max-width-container">
-          <div class="glider-contain" id="gallery">
-            <div class="glider">
-              <img
-                class="product-img"
-                data-index="1"
-                src="hero.jpg"
-                alt="Pilt meie sülearvutilauast"
-              />
-              <img
-                class="product-img"
-                data-index="2"
-                src="hero.jpg"
-                alt="Pilt meie sülearvutilauast"
-              />
+          <div class="gallery-container">
+            <div class="glide gallery" id="gallery">
+              <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                  <li>
+                    <img
+                      class="product-img"
+                      data-index="1"
+                      src="hero.jpg"
+                      alt="Pilt meie sülearvutilauast"
+                    />
+                  </li>
+                  <li>
+                    <img
+                      class="product-img"
+                      data-index="2"
+                      src="hero.jpg"
+                      alt="Pilt meie sülearvutilauast"
+                    />
+                  </li>
+                </ul>
+              </div>
+              <div class="glide-controls" data-glide-el="controls">
+                <button
+                  aria-label="Previous"
+                  data-glide-dir="<"
+                  class="button-previous"
+                >
+                  <img src="left.svg" alt="Previous image icon" />
+                </button>
+                <button
+                  aria-label="Next"
+                  data-glide-dir=">"
+                  class="button-next"
+                >
+                  <img src="right.svg" alt="Next image icon" />
+                </button>
+              </div>
             </div>
-            <button aria-label="Previous" class="glider-prev">
-              <img src="left.svg" alt="Previous image icon" />
-            </button>
-            <button aria-label="Next" class="glider-next">
-              <img src="right.svg" alt="Next image icon" />
-            </button>
           </div>
           <div class="product-text">
             <h2 class="product-title">Sülearvutilaud</h2>

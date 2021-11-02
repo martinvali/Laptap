@@ -300,6 +300,42 @@ header .max-width-container {
   text-align: center;
 }
 
+.gallery {
+  flex: 1 1 0;
+}
+
+.gallery-container {
+  flex: 1 1 0;
+  min-width: 0; /* NECESSARY FOR GLIDE JS NOT TO GO CRAZY */
+}
+
+.product-text {
+  flex: 1 1 0;
+}
+
+.button-previous,
+.button-next {
+  border: none;
+  background: none;
+  position: absolute;
+}
+.button-previous img,
+.button-next img {
+  width: 100%;
+}
+.button-previous {
+  left: 5px;
+  top: 50%;
+  width: 15px;
+  transform: translateY(-50%);
+}
+
+.button-next {
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+}
 /* FAQ SECTION */
 
 .heading-faq {

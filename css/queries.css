@@ -212,8 +212,8 @@
   }
 
   .ordering-container {
-    display: flex;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     gap: 3.2rem;
   }
 
@@ -228,10 +228,6 @@
 
   .product-text {
     flex: 1 1 0;
-  }
-
-  .gallery .product-img {
-    width: 100%;
   }
 
   .flex-questions-text-container {

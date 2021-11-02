@@ -1,3 +1,9 @@
+import Glide from "@glidejs/glide";
+
+new Glide(".glide", {
+  type: "carousel",
+}).mount();
+
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
   var flex = document.createElement("div");
