@@ -92,6 +92,34 @@
     width: 30px;
     height: 30px;
   }
+
+  .button-previous,
+  .button-next {
+    width: 18px;
+  }
+
+  .button-previous {
+    left: 8px;
+  }
+
+  .button-next {
+    right: 8px;
+  }
+
+  .gallery-container {
+    margin-bottom: 2.4rem;
+  }
+
+  .product-title {
+    margin-bottom: 1.2rem;
+  }
+  .product-description {
+    margin-bottom: 2.4rem;
+  }
+
+  .product-prices {
+    margin-bottom: 2.4rem;
+  }
 }
 
 @media (min-width: 46.875em) {
@@ -209,12 +237,6 @@
   .producing-container {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-  }
-
-  .ordering-container {
-    display: grid;
-    grid-template-columns: 1.5fr 1fr;
-    gap: 3.2rem;
   }
 
   .no-flexbox-gap .gallery {
@@ -370,11 +392,37 @@
   .navigation-link-cta-desktop a {
     padding: 0.8rem 3.2rem;
   }
+
+  .ordering-container {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 3.2rem;
+  }
+
+  .btn-order {
+    width: 60%;
+  }
 }
 
 @media (min-width: 71.875em) {
   .ordering-container {
     gap: 4.8rem;
+  }
+
+  .product-title {
+    font-size: 3.125rem;
+  }
+
+  .product-description {
+    font-size: 2rem;
+  }
+
+  .product-price {
+    font-size: 3.125rem;
+  }
+
+  .product-price-savings {
+    font-size: 1.6rem;
   }
 
   .no-flexbox-gap .gallery {
@@ -476,5 +524,9 @@
   .no-flexbox-gap .navigation-links-desktop li:not(:last-of-type) {
     /* POLYFILL FOR THE GAP PROPERTY ABOVE */
     margin-right: 3.8rem;
+  }
+
+  .ordering-container {
+    grid-template-columns: 1fr 1fr;
   }
 }

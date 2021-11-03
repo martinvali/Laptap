@@ -232,7 +232,8 @@ ul {
   color: #f4fdfa;
 }
 
-.btn-secondary:hover {
+.btn-secondary:hover,
+.btn-secondary:focus {
   background-color: #087f5b;
   border-color: #087f5b;
   color: #f4fdfa;

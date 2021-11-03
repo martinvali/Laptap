@@ -1,8 +1,11 @@
 import Glide from "@glidejs/glide";
+import { Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
 
 new Glide(".glide", {
   type: "carousel",
-}).mount();
+  animationDuration: 800,
+  autoplay: 5000,
+}).mount({ Autoplay });
 
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {

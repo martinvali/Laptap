@@ -195,13 +195,15 @@ header .max-width-container {
   border: 2.5px solid #087f5b;
 }
 
-.btn-secondary {
+.btn-secondary,
+.btn-secondary:visited {
   border: 2.5px solid #087f5b;
   font-size: 2rem;
   padding: 0.4rem 1.4rem 0.4rem 1.4rem;
   color: #343a40;
   border-radius: 10px;
   margin-bottom: 4.8rem;
+  background-color: transparent;
 }
 
 .hero-img {
@@ -306,7 +308,17 @@ header .max-width-container {
 
 .gallery-container {
   flex: 1 1 0;
+  margin-bottom: 1.6rem;
   min-width: 0; /* NECESSARY FOR GLIDE JS NOT TO GO CRAZY */
+}
+
+.gallery-container img {
+  border-radius: 10px;
+}
+
+.kkk {
+  color: inherit;
+  text-decoration: underline;
 }
 
 .product-text {
