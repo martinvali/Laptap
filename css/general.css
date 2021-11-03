@@ -15,6 +15,10 @@ body {
   color: #495057;
   overflow-x: hidden;
 }
+button,
+a {
+  cursor: pointer;
+}
 
 body,
 body * {
@@ -213,27 +217,30 @@ ul {
 }
 
 .navigation-link-anchor-desktop:hover,
-.navigation-link-anchor:hover {
+.navigation-link-anchor:hover,
+a.footer-text:hover {
   color: #087f5b;
 }
 
 .navigation-link-cta,
 .navigation-link-anchor-desktop,
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+a.footer-text,
+.btn-order {
   transition: all 0.15s linear;
 }
 
 .navigation-link-cta:hover,
 .navigation-link-cta-desktop .navigation-link-anchor-desktop:hover,
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-order:hover {
   background-color: #0ca678;
   border-color: #0ca678;
   color: #f4fdfa;
 }
 
-.btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:hover {
   background-color: #087f5b;
   border-color: #087f5b;
   color: #f4fdfa;

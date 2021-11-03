@@ -230,7 +230,8 @@
     gap: 4rem;
   }
 
-  .heading-secondary {
+  .heading-secondary,
+  .heading-faq {
     margin-bottom: 4.8rem;
   }
 
@@ -348,7 +349,8 @@
   .subheading {
     font-size: 2rem;
   }
-  .heading-secondary {
+  .heading-secondary,
+  .heading-faq {
     font-size: 3.906rem;
   }
 
@@ -373,7 +375,8 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .heading-secondary {
+  .heading-secondary,
+  .heading-faq {
     margin-bottom: 6.4rem;
   }
 
@@ -397,14 +400,54 @@
     display: grid;
     grid-template-columns: 1.15fr 1fr;
     gap: 3.2rem;
+    align-items: center;
   }
 
   .btn-order {
     width: 60%;
+    max-width: 225px;
+  }
+
+  .product-prices {
+    justify-content: flex-start;
+    gap: 1.8rem;
+  }
+
+  .no-flexbox-gap .product-price {
+    /* POLYFILL FOR THE GAP PROPERTY ABOVE */
+    margin-right: 1.8rem;
+  }
+
+  .order-info {
+    text-align: left;
   }
 }
 
 @media (min-width: 71.875em) {
+  .p-top-64 {
+    padding-top: 11.2rem;
+  }
+
+  .p-btm-64 {
+    padding-bottom: 11.2rem;
+  }
+  .feature-card-heading {
+    font-size: 2.5rem;
+  }
+
+  .feature-card-description {
+    font-size: 2rem;
+  }
+
+  .feature-card-icon {
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+
+  .feature-card-heading,
+  .producing-step-heading {
+    margin-bottom: 0.6rem;
+  }
   .ordering-container {
     gap: 4.8rem;
   }
@@ -514,8 +557,9 @@
     row-gap: 1.6rem;
   }
 
-  .heading-secondary {
-    margin-bottom: 8rem;
+  .heading-secondary,
+  .heading-faq {
+    margin-bottom: 7.2rem;
   }
 
   .navigation-links-desktop {
@@ -528,5 +572,9 @@
 
   .ordering-container {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .logo-footer {
+    margin-bottom: 2.4rem;
   }
 }
