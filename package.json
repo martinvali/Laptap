@@ -12,6 +12,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.4.1",
     "accordion-js": "^3.1.1",
+    "smoothscroll-polyfill": "^0.4.4",
     "webpack": "^5.61.0"
   },
   "devDependencies": {

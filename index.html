@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"> <!-- Necessary as a polyfill -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -47,42 +47,42 @@
             </button>
             <ul class="navigation-links">
               <li class="navigation-link">
-                <a class="navigation-link-anchor" href="#meist">Meist</a>
+                <a class="navigation-link-anchor" data-navigateTo="#meist" >Meist</a>
               </li>
               <li class="navigation-link">
-                <a class="navigation-link-anchor" href="#tootest">Tootest</a>
+                <a class="navigation-link-anchor" data-navigateTo="#tootest">Tootest</a>
               </li>
               <li class="navigation-link">
-                <a class="navigation-link-anchor" href="#tootmine">Tootmine</a>
+                <a class="navigation-link-anchor" data-navigateTo="#tootmine">Tootmine</a>
               </li>
               <li class="navigation-link">
-                <a class="navigation-link-anchor" href="#kkk">KKK</a>
+                <a class="navigation-link-anchor" data-navigateTo="#kkk">KKK</a>
               </li>
               <li class="navigation-link navigation-link-cta">
-                <a class="navigation-link-anchor" href="#tellima">Tellima</a>
+                <a class="navigation-link-anchor" data-navigateTo="#tellima">Tellima</a>
               </li>
             </ul>
           </div>
 
           <ul class="navigation-links-desktop">
             <li class="navigation-link-desktop">
-              <a class="navigation-link-anchor-desktop" href="#meist">Meist</a>
+              <a class="navigation-link-anchor-desktop" data-navigateTo="#meist">Meist</a>
             </li>
             <li class="navigation-link-desktop">
-              <a class="navigation-link-anchor-desktop" href="#tootest"
+              <a class="navigation-link-anchor-desktop" data-navigateTo="#tootest"
                 >Tootest</a
               >
             </li>
             <li class="navigation-link-desktop">
-              <a class="navigation-link-anchor-desktop" href="#tootmine"
+              <a class="navigation-link-anchor-desktop" data-navigateTo="#tootmine"
                 >Tootmine</a
               >
             </li>
             <li class="navigation-link-desktop">
-              <a class="navigation-link-anchor-desktop" href="#kkk">KKK</a>
+              <a class="navigation-link-anchor-desktop" data-navigateTo="#kkk">KKK</a>
             </li>
             <li class="navigation-link-desktop navigation-link-cta-desktop">
-              <a class="navigation-link-anchor-desktop" href="#tellima"
+              <a class="navigation-link-anchor-desktop" data-navigateTo="#tellima"
                 >Tellima</a
               >
             </li>
@@ -104,8 +104,8 @@
               vähenemise eest. Hoidke kokku hoolduskuludelt.
             </p>
 
-            <a href="#tellima" class="btn-primary">Tellima</a>
-            <a href="#tellima" class="btn-secondary">Galerii</a>
+            <a data-navigateTo="#tellima"" class="btn-primary">Tellima</a>
+            <a data-navigateTo="#tellima"" class="btn-secondary">Galerii</a>
           </div>
           <div class="hero-img-container">
             <img
@@ -354,7 +354,9 @@
               </p>
               <p class="product-price-savings">Säästa laadahinnast x%</p>
             </div>
-            <a class="btn-order" href="#">Tellima</a>
+          <form action="/checkout.html" method="GET">
+            <button class="btn-order" type="submit">Tellima</button>
+          </form>
             <p class="order-info">
               Hinnale võib lisanduda transpordikulu. Lisainfo:&nbsp;<a
                 class="kkk"

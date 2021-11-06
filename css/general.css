@@ -20,6 +20,14 @@ a {
   cursor: pointer;
 }
 
+button:focus,
+a:focus,
+a:hover,
+button:hover {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body,
 body * {
   max-height: 1000000px; /* TO DISABLE FONT BOOSTING https://bugs.webkit.org/show_bug.cgi?id=FontBoosting */

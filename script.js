@@ -1,8 +1,15 @@
 import Glide from "@glidejs/glide";
 import Accordion from "accordion-js";
-import { Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
+import { Anchors, Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
+window.__forceSmoothScrollPolyfill__ = true;
+
+import smoothscroll from "smoothscroll-polyfill";
+
+smoothscroll.polyfill();
+console.log("Polyfill");
 
 // Fixing flexbox gap property missing in some Safari versions
+
 function checkFlexGap() {
   var flex = document.createElement("div");
   flex.style.display = "flex";
@@ -60,6 +67,18 @@ function faqArrowClose(element) {
     "closeAnimation 0.2s linear";
   element.querySelector(".faq-question").style.backgroundColor = "#EDEDED";
 }
+
+function anchorScrollTo() {
+  document.querySelectorAll("[data-navigateTo]").forEach(function (e) {
+    e.addEventListener("click", function (e) {
+      document
+        .querySelector(e.target.dataset.navigateto)
+        .scrollIntoView({ behaviour: "smooth" });
+    });
+  });
+}
+
+anchorScrollTo();
 
 checkFlexGap();
 hamburgerMenu();
