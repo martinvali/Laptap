@@ -18,19 +18,22 @@
     />
     <script defer src="https://js.stripe.com/v3/"></script>
     <script defer src="checkout.js"></script>
+    <link href="css/checkout-queries.css" rel="stylesheet" />
 
     <title>Checkout</title>
   </head>
   <body>
     <header class="header outer-container">
       <div class="max-width-container">
-        <button class="btn-back"><img /></button>
+        <a href="https://laptap.netlify.app#tellima"
+          ><img src="arrow-back.svg" alt="Tagasi"
+        /></a>
         <h1 class="heading-primary">Tellimus</h1>
       </div>
     </header>
     <main>
-      <section class="section-cart outer-container">
-        <div class="max-width-container">
+      <div class="max-width-container">
+        <section class="section-cart outer-container">
           <h2 class="heading-secondary">Ostukorv</h2>
           <article class="product-card">
             <div class="image-container"></div>
@@ -64,39 +67,37 @@
               <p class="total-price-label">Hind kokku</p>
               <p class="total-price-value">19</p>
             </div>
+            <button class="btn-order-1" type="submit" for="payment-form">
+              Kinnitan tellimuse
+            </button>
           </div>
-        </div>
-      </section>
-      <section class="section-information outer-container">
-        <div class="max-width-container">
-          <h2 class="heading-secondary">Kontakt</h2>
-          <label for="name" class="label name-label"
-            >Ees- ja perekonnanimi</label
-          >
-          <input id="name" class="input" type="text" required />
-
-          <label for="email" class="label email-label">E-post</label>
-          <input id="email" class="input" type="email" required />
-
-          <label for="phone" class="label phone-label">Telefon</label>
-          <input id="phone" class="input" type="tel" required />
-        </div>
-      </section>
-      <section class="section-payment outer-container">
-        <div class="max-width-container">
-          <h2 class="heading-secondary">Maksmine</h2>
+        </section>
+        <section class="section-information outer-container">
+          <h2 class="heading-secondary">Kontakt ja tasumine</h2>
           <form id="payment-form">
+            <label for="name" class="label name-label"
+              >Ees- ja perekonnanimi</label
+            >
+            <input id="name" class="input" type="text" required />
+
+            <label for="email" class="label email-label">E-post</label>
+            <input id="email" class="input" type="email" required />
+
+            <label for="phone" class="label phone-label">Telefon</label>
+            <input id="phone" class="input" type="tel" required />
+
             <div id="payment-element">
               <!--Stripe.js injects the Payment Element-->
             </div>
-            <button id="submit">
-              <div class="spinner hidden" id="spinner"></div>
-              <span id="button-text">Pay now</span>
-            </button>
+
             <div id="payment-message" class="hidden"></div>
+
+            <button class="btn-order-2" type="submit" for="payment-form">
+              Kinnitan tellimuse
+            </button>
           </form>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   </body>
 </html>
