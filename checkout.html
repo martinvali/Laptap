@@ -10,13 +10,10 @@
       src="https://www.omniva.ee/widget/widget.js"
       defer
     ></script>
+
+    <link rel="stylesheet" href="css/checkout.css" />
     <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://www.omniva.ee/widget/widget.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
     <script defer src="https://js.stripe.com/v3/"></script>
@@ -27,19 +24,67 @@
   <body>
     <header class="header outer-container">
       <div class="max-width-container">
-        <button class="btn-back"></button>
-        <h1 class="tellimus">Tellimus</h1>
+        <button class="btn-back"><img /></button>
+        <h1 class="heading-primary">Tellimus</h1>
       </div>
     </header>
     <main>
-      <section class="section-information outer-container">
-        <div class="max-width-container"></div>
+      <section class="section-cart outer-container">
+        <div class="max-width-container">
+          <h2 class="heading-secondary">Ostukorv</h2>
+          <article class="product-card">
+            <div class="image-container"></div>
+            <div class="product-text-container">
+              <p class="product-title">Kokkuvolditav sülearvutilaud</p>
+              <div class="product-text-flex-container">
+                <p class="product-price">EUR 49</p>
+                <select class="product-quantity">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </div>
+            </div>
+          </article>
+          <h2 class="heading-secondary">Transport</h2>
+
+          <div id="omniva_container2"></div>
+          <div class="prices-container">
+            <div class="product-price">
+              <p class="product-price-label">Tooted</p>
+              <p class="product-price-value">19</p>
+            </div>
+            <div class="transport-price">
+              <p class="transport-price-label">Transport</p>
+              <p class="transport-price-value">19</p>
+            </div>
+            <div class="total-price">
+              <p class="total-price-label">Hind kokku</p>
+              <p class="total-price-value">19</p>
+            </div>
+          </div>
+        </div>
       </section>
-      <section class="section-transport outer-container">
-        <div class="max-width-container"></div>
+      <section class="section-information outer-container">
+        <div class="max-width-container">
+          <h2 class="heading-secondary">Kontakt</h2>
+          <label for="name" class="label name-label"
+            >Ees- ja perekonnanimi</label
+          >
+          <input id="name" class="input" type="text" required />
+
+          <label for="email" class="label email-label">E-post</label>
+          <input id="email" class="input" type="email" required />
+
+          <label for="phone" class="label phone-label">Telefon</label>
+          <input id="phone" class="input" type="tel" required />
+        </div>
       </section>
       <section class="section-payment outer-container">
         <div class="max-width-container">
+          <h2 class="heading-secondary">Maksmine</h2>
           <form id="payment-form">
             <div id="payment-element">
               <!--Stripe.js injects the Payment Element-->
@@ -49,8 +94,6 @@
               <span id="button-text">Pay now</span>
             </button>
             <div id="payment-message" class="hidden"></div>
-
-            <div id="omniva_container2"></div>
           </form>
         </div>
       </section>

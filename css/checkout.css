@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #495057;
+}
+button,
+a {
+  cursor: pointer;
+}
+
+button:focus,
+a:focus,
+a:hover,
+button:hover {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.outer-container {
+  width: 100vw;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 3.2rem;
+}
+
+section.outer-container {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+/* HEADER */
+
+header {
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.03);
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+.btn-back {
+  background: none;
+  border: none;
+}
+
+.heading-primary {
+  color: #0ca678;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+#omniva_container2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3.2rem;
+}
+#omniva_container2 img {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+#omniva_container2 table {
+  font-family: inherit;
+}
+
+#omniva_select2 {
+  width: 90%;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 12px;
+  border: 1px solid #e6e6e6;
+  background: transparent;
+}
+
+td.ow_td:first-of-type {
+  display: none;
+}
+
+table.ow_table {
+  padding: 0;
+}
+
+/* CART SECTION */
+
+.product-card {
+  display: flex;
+  max-height: 100px;
+  margin-bottom: 3.2rem;
+}
+.image-container {
+  margin-right: 1.2rem;
+}
+
+.product-text-container {
+  flex: 1 1 0;
+}
+
+.product-text-flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.product-title {
+  font-size: 1.6rem;
+  color: #0ca678;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.product-quantity {
+  font-weight: 600;
+  font-family: inherit;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  padding: 2px;
+  border: none;
+  background: transparent;
+}
+
+.product-price {
+  font-weight: 500;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+}
+
+.product-price,
+.transport-price,
+.total-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.transport-price {
+  margin-bottom: 1.8rem;
+}
+
+.product-price-label,
+.transport-price-label {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: #495057;
+}
+
+.total-price-label {
+  font-weight: 600;
+  font-size: 2rem;
+  color: #0ca678;
+}
+
+.product-price-value,
+.transport-price-value {
+  color: #495057;
+  font-weight: 500;
+  font-size: 1.6rem;
+}
+
+.total-price-value {
+  color: #0ca678;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* CONTACT SECTION */
+
+.label,
+.input {
+  display: block;
+}
+
+.label {
+  margin-bottom: 0.4rem;
+  font-size: 1.6rem;
+  color: #495057;
+  font-weight: 500;
+  font-family: inherit;
+}
+
+.input {
+  font-family: inherit;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  padding: 12px;
+  border: 1px solid #e6e6e6;
+  background: transparent;
+  width: 100%;
+}
+.input:not(:last-of-type) {
+  margin-bottom: 1.8rem;
+}
