@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script
-      async
+      defer
       type="text/javascript"
       src="https://www.omniva.ee/widget/widget.js"
       defer
@@ -15,23 +15,45 @@
       type="text/css"
       href="https://www.omniva.ee/widget/widget.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <script defer src="https://js.stripe.com/v3/"></script>
     <script defer src="checkout.js"></script>
 
     <title>Checkout</title>
   </head>
   <body>
-    <form id="payment-form">
-      <div id="payment-element">
-        <!--Stripe.js injects the Payment Element-->
+    <header class="header outer-container">
+      <div class="max-width-container">
+        <button class="btn-back"></button>
+        <h1 class="tellimus">Tellimus</h1>
       </div>
-      <button id="submit">
-        <div class="spinner hidden" id="spinner"></div>
-        <span id="button-text">Pay now</span>
-      </button>
-      <div id="payment-message" class="hidden"></div>
+    </header>
+    <main>
+      <section class="section-information outer-container">
+        <div class="max-width-container"></div>
+      </section>
+      <section class="section-transport outer-container">
+        <div class="max-width-container"></div>
+      </section>
+      <section class="section-payment outer-container">
+        <div class="max-width-container">
+          <form id="payment-form">
+            <div id="payment-element">
+              <!--Stripe.js injects the Payment Element-->
+            </div>
+            <button id="submit">
+              <div class="spinner hidden" id="spinner"></div>
+              <span id="button-text">Pay now</span>
+            </button>
+            <div id="payment-message" class="hidden"></div>
 
-      <div id="omniva_container2"></div>
-    </form>
+            <div id="omniva_container2"></div>
+          </form>
+        </div>
+      </section>
+    </main>
   </body>
 </html>

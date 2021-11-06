@@ -24,10 +24,10 @@ let elements;
 
 initialize();
 
-document
+/*document
   .querySelector("#payment-form")
   .addEventListener("submit", handleSubmit);
-
+*/
 async function initialize() {
   const response = await fetch(
     "https://laptap.herokuapp.com/create-checkout-session"
@@ -38,15 +38,24 @@ async function initialize() {
     theme: "stripe",
     variables: {
       colorPrimary: "#63d9b6",
-      colorText: "#1b5c49",
+      colorText: "#343A40",
+      borderRadius: "5px",
+      fontFamily: "Poppins, sans-serif",
+      fontWeightNormal: 500,
+      spacingUnit: "4px",
     },
   };
   elements = stripe.elements({ appearance, clientSecret });
 
   const paymentElement = elements.create("payment");
   paymentElement.mount("#payment-element");
+  console.log("done");
 }
 
 window.addEventListener("load", function () {
-  console.log("loaded");
-})
+  console.log("Load");
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  console.log("DOMContentLoaded");
+});

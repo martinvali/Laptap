@@ -87,6 +87,8 @@ new Glide(".glide", {
   type: "carousel",
   animationDuration: 800,
   autoplay: 5000,
+  hoverpause: true,
+  perTouch: 2,
 }).mount({ Autoplay });
 
 new Accordion(".accordion-container", {
