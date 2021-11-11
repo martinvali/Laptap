@@ -16,7 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="https://js.stripe.com/v3/"></script>
+    <script src="https://js.stripe.com/v3/"></script>
     <script defer src="checkout.js"></script>
     <link href="css/checkout-queries.css" rel="stylesheet" />
 
@@ -25,7 +25,7 @@
   <body>
     <header class="header outer-container">
       <div class="max-width-container">
-        <a href="https://laptap.netlify.app#tellima"
+        <a class="btn-back" href="https://laptap.netlify.app#tellima"
           ><img src="arrow-back.svg" alt="Tagasi"
         /></a>
         <h1 class="heading-primary">Tellimus</h1>
@@ -57,20 +57,41 @@
           <div class="prices-container">
             <div class="product-price">
               <p class="product-price-label">Tooted</p>
-              <p class="product-price-value">19</p>
+              <div class="spinner-product-price hidden">&nbsp;</div>
+              <p class="product-price-value">1 x 39 = 39€</p>
             </div>
             <div class="transport-price">
               <p class="transport-price-label">Transport</p>
-              <p class="transport-price-value">19</p>
+              <div class="spinner-transport-price hidden">&nbsp;</div>
+              <p class="transport-price-value">0€</p>
             </div>
             <div class="total-price">
               <p class="total-price-label">Hind kokku</p>
-              <p class="total-price-value">19</p>
+              <div class="spinner-total-price hidden">&nbsp;</div>
+              <p class="total-price-value">39€</p>
             </div>
-            <button class="btn-order-1" type="submit" for="payment-form">
+            <button
+              id="submitBtn"
+              class="btn-order-1"
+              type="submit"
+              form="payment-form"
+            >
               Kinnitan tellimuse
+              
             </button>
+         <!--   <div class="climate-text-container climate-text-container-1">
+              <div class="img-container">
+                <img
+                  src="Stripe Climate Badge.svg"
+                  alt="Stripe climate badge"
+                />
+              </div>
+
+              <p class="climate-text">
+                Annetame igalt ostult 1% CO2 koguse vähendamiseks atmosfääris.
+              </p>
           </div>
+        -->
         </section>
         <section class="section-information outer-container">
           <h2 class="heading-secondary">Kontakt ja tasumine</h2>
@@ -86,15 +107,35 @@
             <label for="phone" class="label phone-label">Telefon</label>
             <input id="phone" class="input" type="tel" required />
 
+            <div class="spinner hidden" id="spinner">&nbsp;</div>
+
             <div id="payment-element">
               <!--Stripe.js injects the Payment Element-->
             </div>
 
             <div id="payment-message" class="hidden"></div>
 
-            <button class="btn-order-2" type="submit" for="payment-form">
+            <button
+              id="submitBtn"
+              class="btn-order-2"
+              type="submit"
+              form="payment-form"
+            >
               Kinnitan tellimuse
             </button>
+         <!--  <div class="climate-text-container climate-text-container-2">
+              <div class="img-container">
+                <img
+                  src="Stripe Climate Badge.svg"
+                  alt="Stripe climate badge"
+                />
+              </div>
+ 
+              <p class="climate-text">
+                Annetame igalt ostult 1% CO2 koguse vähendamiseks atmosfääris.
+              </p>
+            </div>
+            -->
           </form>
         </section>
       </div>

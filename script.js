@@ -83,13 +83,16 @@ anchorScrollTo();
 checkFlexGap();
 hamburgerMenu();
 
-new Glide(".glide", {
+const glider = new Glide(".glide", {
   type: "carousel",
   animationDuration: 800,
   autoplay: 5000,
   hoverpause: true,
-  perTouch: 2,
 }).mount({ Autoplay });
+
+setTimeout(() => {
+  glider.update();
+}, 500); /* TO FIX GLIDE BUG */
 
 new Accordion(".accordion-container", {
   duration: 200,

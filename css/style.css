@@ -313,6 +313,10 @@ header .max-width-container {
   min-width: 0; /* NECESSARY FOR GLIDE JS NOT TO GO CRAZY */
 }
 
+.glide {
+  min-width: 0;
+}
+
 .gallery-container img {
   border-radius: 10px;
 }

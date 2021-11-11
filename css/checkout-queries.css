@@ -17,6 +17,14 @@
 }
 
 @media (min-width: 62.5em) {
+  .btn-back img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .btn-back {
+    margin-right: 3.2rem;
+  }
   .heading-primary {
     font-size: 3.106rem;
   }
@@ -51,6 +59,9 @@
 }
 
 @media (min-width: 75em) {
+  header .max-width-container {
+    padding-left: 2.5rem;
+  }
   .heading-secondary {
     margin-bottom: 3.2rem;
   }
