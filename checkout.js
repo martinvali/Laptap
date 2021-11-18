@@ -164,7 +164,7 @@ async function initialize() {
       ".input:focus": {
         border: "2px solid #63d9b6",
       },
-      ".Label--invalid": {
+      ".Error": {
         fontSize: "1.2rem",
       },
     },
