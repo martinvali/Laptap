@@ -68,11 +68,18 @@ function currentSelectedTransport() {
   return document.querySelector("#omniva_select2")?.value || "";
 }
 
-async function updatePrice() {
+function currentSelectedTransportName() {
+  const omnivaSelect = document.querySelector("#omniva_select2");
+  return omnivaSelect.options[omnivaSelect.selectedIndex].innerText || "";
+}
+
+async function updatePrice(e) {
+  document.querySelector("#submitBtn").disabled = true;
+
   document.querySelector(".spinner-total-price").classList.remove("hidden");
   document.querySelector(".total-price-value").style.display = "none";
   const response = await fetch(
-    `https://laptap.herokuapp.com/payment-intent/${localStorage.getItem(
+    `https://laptap.herokuapp.com/payment-intent/prices/${localStorage.getItem(
       "paymentId"
     )}`,
     {
@@ -88,17 +95,26 @@ async function updatePrice() {
 
   const { unitPrice, productsPrice, quantity, transportPrice, totalPrice } =
     await response.json();
+  document.querySelector("#submitBtn").disabled = false;
+
+  /* FIRST MAKE SURE THERE ARE NO ERRORS */
+
+  document.querySelector(".total-price-value").style.display = "inline";
+  document.querySelector(".spinner-total-price").classList.add("hidden");
+
   productsPriceText(quantity, unitPrice, productsPrice);
   transportPriceText(transportPrice);
   totalPriceText(totalPrice);
 }
 
 async function initialize() {
+  document.querySelector("#submitBtn").disabled = false;
+
   document
     .querySelector(".product-quantity")
     .addEventListener("change", updatePrice);
 
-  setLoading(true);
+  setPaymentELLoading(true);
 
   const response = await fetch("https://laptap.herokuapp.com/payment-intent", {
     method: "POST",
@@ -148,6 +164,9 @@ async function initialize() {
       ".input:focus": {
         border: "2px solid #63d9b6",
       },
+      ".Input--invalid": {
+        fontSize: "1.2rem",
+      },
     },
   };
 
@@ -165,14 +184,34 @@ async function initialize() {
   paymentElement.mount("#payment-element");
 
   paymentElement.on("ready", function () {
-    setLoading(false);
+    setPaymentELLoading(false);
   });
 }
 
 async function handleSubmit(e) {
   e.preventDefault();
+  const email = document.querySelector("#email").value;
+  const name = document.querySelector("#name").value;
+  const phone = document.querySelector("#phone").value;
 
-  setLoading(true);
+  fetch(
+    `https://laptap.herokuapp.com/payment-intent/metadata/${localStorage.getItem(
+      "paymentId"
+    )}`,
+    {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        email,
+        fullName: name,
+        phone,
+        transport: currentSelectedTransportName(),
+      }),
+    }
+  );
+  setSubmitLoading(true);
+
   const { error } = await stripe.confirmPayment({
     elements,
     confirmParams: {
@@ -201,8 +240,10 @@ function showMessage(messageText) {
   }, 4000);
 }
 
+function fetchWithTimeout(link, timeout) {}
+
 // Show a spinner on payment submission
-function setLoading(isLoading) {
+function setPaymentELLoading(isLoading) {
   if (isLoading) {
     // Disable the button and show a spinner
     document.querySelector("#submitBtn").disabled = true;
@@ -215,5 +256,15 @@ function setLoading(isLoading) {
     document.querySelector("#payment-element").classList.remove("hidden");
 
     // document.querySelector("#button-text").classList.remove("hidden");
+  }
+}
+
+function setSubmitLoading(isLoading) {
+  if (isLoading) {
+    const submitBtns = document.querySelectorAll(".btn-order-2, .btn-order-1");
+    submitBtns.forEach(function (btn) {
+      btn.disabled = true;
+      btn.style.opacity = 0.6;
+    });
   }
 }

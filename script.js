@@ -60,6 +60,7 @@ function faqArrowOpen(element) {
   element.querySelector(".faq-arrow").style.animation =
     "openAnimation 0.2s linear";
   element.querySelector(".faq-question").style.backgroundColor = "#F9FAF8";
+  element.querySelector("");
 }
 
 function faqArrowClose(element) {
