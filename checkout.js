@@ -220,9 +220,9 @@ async function handleSubmit(e) {
     },
   });
   if (error.type === "card_error" || error.type === "validation_error") {
-    showMessage(error.message);
+    // showMessage(error.message);
   } else {
-    showMessage("An unexpected error occured.");
+    //  showMessage("An unexpected error occured.");
   }
 }
 
