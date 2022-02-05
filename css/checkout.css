@@ -279,6 +279,38 @@ select:focus,
   margin-right: 1.2rem;
 }
 
+.discount-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 3.2rem;
+}
+
+.discount-apply {
+  border: none;
+  display: inline-block;
+  padding: 0 auto;
+  font-family: "Poppins", sans-serif;
+  background: none;
+  border: none;
+  color: #0ca678;
+  font-size: 1.6rem;
+  border-radius: 5px;
+  text-align: left;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.discount-apply:hover {
+  color: #087f5b;
+}
+.discount.input {
+  flex-basis: 70%;
+  margin-bottom: 0;
+  flex: 0 1 75%;
+  margin-right: 3%;
+}
+
 .product-text-container {
   flex: 1 1 0;
   display: flex;
@@ -314,10 +346,16 @@ select:focus,
 
 .product-price,
 .transport-price,
+.discount-price,
 .total-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.4rem;
+}
+
+.total-price {
+  margin-top: 1.8rem;
 }
 
 .product-img {
@@ -325,12 +363,14 @@ select:focus,
   margin-right: 1.2rem;
   border-radius: 5px;
 }
-.transport-price {
-  margin-bottom: 1.8rem;
+.discount-price {
+  visibility: hidden; /* TO HIDE THE ELEMENT WITHOUT REMOVING IN FROM THE DOM */
+  position: absolute;
 }
 
 .product-price-label,
-.transport-price-label {
+.transport-price-label,
+.discount-price-label {
   font-weight: 500;
   font-size: 1.6rem;
   color: #495057;
@@ -343,7 +383,8 @@ select:focus,
 }
 
 .product-price-value,
-.transport-price-value {
+.transport-price-value,
+.discount-price-value {
   color: #495057;
   font-weight: 500;
   font-size: 1.6rem;
@@ -378,8 +419,6 @@ select:focus,
   border: 1px solid #e6e6e6;
   background: transparent;
   width: 100%;
-}
-.input {
   margin-bottom: 1.8rem;
 }
 

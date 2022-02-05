@@ -22,7 +22,6 @@ const wd2 = new OmnivaWidget({
   selection_value: "", // Preselected value. (case insensitive, will be trimmed) Can be empty or entirely omitted. Optional
 });
 
-const item = [{ id: "prod_KXEBEYAwVhIrTA" }];
 let elements;
 window.addEventListener("load", function () {
   const omnivaSelect = document.querySelector("#omniva_select2");
@@ -33,8 +32,6 @@ window.addEventListener("load", function () {
   omnivaSelect.setAttribute("form", "payment-form");
   omnivaSelect.prepend(opt);
   omnivaSelect.value = opt;
-
-  console.log(omnivaSelect);
   omnivaSelect.addEventListener("change", updatePrice);
 });
 
@@ -43,6 +40,10 @@ initialize();
 document
   .querySelector("#payment-form")
   .addEventListener("submit", handleSubmit);
+
+document
+  .querySelector(".discount-apply")
+  .addEventListener("click", checkDiscount);
 
 function productsPriceText(quantity, unitPrice, totalAmount) {
   document.querySelector(
@@ -60,12 +61,28 @@ function totalPriceText(totalPrice) {
   document.querySelector(".total-price-value").innerText = `${totalPrice}€`;
 }
 
+function hideDiscountText() {
+  const discountPriceText = document.querySelector(".discount-price");
+  discountPriceText.style.visibility = "hidden";
+  discountPriceText.style.position = "absolute";
+}
+
+function discountText(discount) {
+  const discountPriceText = document.querySelector(".discount-price");
+  discountPriceText.style.visibility = "visible";
+  discountPriceText.style.position = "relative";
+  document.querySelector(".discount-price-value").innerText = `${discount}€`;
+}
 function currentSelectedQuantity() {
   return document.querySelector(".product-quantity")?.value || 1;
 }
 
 function currentSelectedTransport() {
   return document.querySelector("#omniva_select2")?.value || "";
+}
+
+function currentDiscountCode() {
+  return document.querySelector(".discount")?.value || "";
 }
 
 function currentSelectedTransportName() {
@@ -200,6 +217,57 @@ async function initialize() {
     paymentElement.on("ready", function () {
       setPaymentELLoading(false);
     });
+  } catch (e) {
+    console.log(e);
+  }
+}
+
+async function checkDiscount(e) {
+  try {
+    e.preventDefault();
+    document.querySelector(".spinner-total-price").classList.remove("hidden");
+    document.querySelector(".total-price-value").style.display = "none";
+
+    const { signal, timeoutId } = createAbortSignal(10000);
+    const response = await fetch(
+      `https://laptap.herokuapp.com/discount-code/${localStorage.getItem(
+        "paymentId"
+      )}`,
+      {
+        method: "POST",
+        signal,
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          quantity: currentSelectedQuantity(),
+          transport: currentSelectedTransport(),
+          code: currentDiscountCode(),
+        }),
+      }
+    );
+    clearInterval(timeoutId);
+
+    const responseJSON = await response.json();
+    document.querySelector(".total-price-value").style.display = "inline";
+    document.querySelector(".spinner-total-price").classList.add("hidden");
+    document.querySelector("#submitBtn").disabled = false;
+
+    const {
+      quantity,
+      unitPrice,
+      productsPrice,
+      transportPrice,
+      totalPrice,
+      discount,
+    } = responseJSON;
+    productsPriceText(quantity, unitPrice, productsPrice);
+    transportPriceText(transportPrice);
+    totalPriceText(totalPrice);
+    if (discount === "none") {
+      hideDiscountText();
+    } else {
+      discountText(discount);
+    }
   } catch (e) {
     console.log(e);
   }
