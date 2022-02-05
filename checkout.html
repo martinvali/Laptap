@@ -24,14 +24,14 @@
   </head>
   <body>
     
-  <div class="error-msg">
-    <h2 class="error-heading"></h2>
-    <p class="error-text"></p>
-    
+  <div class="error-msg hidden">
+    <h2 class="error-heading">Midagi läks valesti</h2>
+    <p class="error-text">Palun värskendage lehte, et proovida uuesti.</p>
+    <button class="ok-btn">Selge</button>
   </div>
     <header class="header outer-container">
       <div class="max-width-container">
-        <a class="btn-back" href="https://laptap.netlify.app#tellima"
+        <a class="btn-back" href="https://laptap.ee#tellima"
           ><img src="arrow-back.svg" alt="Tagasi"
         /></a>
         <h1 class="heading-primary">Tellimus</h1>
@@ -48,7 +48,7 @@
             <div class="product-text-container">
               <p class="product-title">Sülearvutilaud</p>
               <div class="product-text-flex-container">
-                <p class="product-price">EUR 39</p>
+                <p class="product-price">EUR 45</p>
                 <select class="product-quantity">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -65,7 +65,7 @@
           <div class="prices-container">
             <div class="product-price">
               <p class="product-price-label">Tooted</p>
-              <p class="product-price-value">1 x 39 = 39€</p>
+              <p class="product-price-value">1 x 45 = 45€</p>
             </div>
             <div class="transport-price">
               <p class="transport-price-label">Transport</p>
@@ -74,8 +74,9 @@
             <div class="total-price">
               <p class="total-price-label">Hind kokku</p>
               <div class="spinner-total-price hidden">&nbsp;</div>
-              <p class="total-price-value">39€</p>
+              <p class="total-price-value">45€</p>
             </div>
+            
             <button
               id="submitBtn"
               class="btn-order-1"
@@ -85,19 +86,22 @@
               Kinnitan tellimuse
               
             </button>
-         <!--   <div class="climate-text-container climate-text-container-1">
+          <div class="climate-text-container climate-text-container-1">
+            <div class="stripe-climate-logo-text">
               <div class="img-container">
                 <img
                   src="Stripe Climate Badge.svg"
                   alt="Stripe climate badge"
                 />
               </div>
-
+              <p class="climate-text-secondary">Stripe Climate</p>
+            </div>
+ 
               <p class="climate-text">
                 Annetame igalt ostult 1% CO2 koguse vähendamiseks atmosfääris.
               </p>
           </div>
-        -->
+        
         </section>
         <section class="section-information outer-container">
           <h2 class="heading-secondary">Kontakt ja tasumine</h2>
@@ -120,7 +124,6 @@
             </div>
 
             <div id="payment-message" class="hidden"></div>
-
             <button
               id="submitBtn"
               class="btn-order-2"
@@ -129,19 +132,23 @@
             >
               Kinnitan tellimuse
             </button>
-         <!--  <div class="climate-text-container climate-text-container-2">
+           <div class="climate-text-container climate-text-container-2">
+            <div class="stripe-climate-logo-text">
               <div class="img-container">
                 <img
                   src="Stripe Climate Badge.svg"
                   alt="Stripe climate badge"
                 />
               </div>
+              <p class="climate-text-secondary">Stripe Climate</p>
+            </div>
  
               <p class="climate-text">
                 Annetame igalt ostult 1% CO2 koguse vähendamiseks atmosfääris.
               </p>
+
             </div>
-            -->
+
           </form>
         </section>
       </div>

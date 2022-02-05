@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+  color: #495057;
+}
+button,
+a {
+  cursor: pointer;
+}
+
+button:focus,
+a:focus,
+a:hover,
+button:hover {
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.outer-container {
+  width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.heading-secondary {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #343a40;
+  margin-bottom: 3.2rem;
+}
+
+.max-width-container {
+  max-width: 1200px;
+}
+
+section.outer-container {
+  padding-top: 3.2rem;
+  padding-bottom: 3.2rem;
+}
+
+.main {
+  padding-bottom: 4.8rem;
+  padding-top: 2.4rem;
+}
+
+/* HEADER */
+
+header {
+  box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.03);
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+  width: 100%;
+}
+
+header .max-width-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.btn-back {
+  background: none;
+  border: none;
+  margin-right: 1.8rem;
+}
+
+.heading-primary {
+  color: #0ca678;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* TEXT CONTENT */
+.text {
+  white-space: pre-line;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+}

@@ -50,6 +50,7 @@ VERTICAL SPACING:
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 header .max-width-container {
@@ -183,6 +184,7 @@ header .max-width-container {
   color: #495057;
   letter-spacing: 0.25px;
   margin-bottom: 4rem;
+  max-width: 600px;
 }
 
 .btn-primary {
@@ -206,12 +208,39 @@ header .max-width-container {
   background-color: transparent;
 }
 
+.hero-img-container {
+  position: relative;
+}
+
+.hero-text-container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero-img {
   display: block;
   border-radius: 5px;
+  z-index: 5;
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.gradient-bg-img {
+  position: absolute;
+  bottom: -115%;
+  max-width: 220%;
+  right: -60%;
+  z-index: 0;
 }
 
 /* ABOUT US SECTION */
+
+.section-about {
+  position: relative;
+  z-index: 1;
+}
 
 .about-paragraph {
   font-size: 1.6rem;
@@ -277,12 +306,6 @@ header .max-width-container {
   font-weight: 500;
 }
 
-.product-price-savings {
-  font-size: 1.28rem;
-  color: #63d9b6;
-  font-weight: 600;
-}
-
 .btn-order {
   background-color: #63d9b6;
   width: 100%;
@@ -315,6 +338,10 @@ header .max-width-container {
 
 .glide {
   min-width: 0;
+}
+
+.glide__slide--active {
+  z-index: 1; /* TO AVOID SLIDE FROM FLICKERING */
 }
 
 .gallery-container img {
@@ -378,7 +405,7 @@ header .max-width-container {
   gap: 1.6rem;
 }
 
-.no-flexbox-gap .faq-question:not(:last-of-type) {
+.no-flexbox-gap .ac:not(:last-of-type) {
   /* POLYFILL FOR THE GAP PROPERY ABOVE */
   margin-bottom: 1.6rem;
 }
@@ -396,6 +423,14 @@ header .max-width-container {
 
 .faq-text-green {
   color: #0a8561;
+}
+
+.faq-phone-nr,
+.faq-gmail {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  text-decoration: underline;
 }
 
 /* FOOTER */
@@ -418,10 +453,11 @@ header .max-width-container {
 .footer-container {
   display: flex;
   flex-direction: column;
-  gap: 0.6rem;
+  gap: 0.8rem;
 }
 
-.no-flexbox-gap .footer-text:not(:last-of-type) {
+.no-flexbox-gap .footer-text:not(:last-of-type),
+.no-flexbox-gap .footer-contact:not(:last-of-type) {
   /* POLYFILL FOR THE GAP PROPERTY ABOVE */
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
 }

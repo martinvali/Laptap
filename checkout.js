@@ -1,5 +1,5 @@
 const stripe = Stripe(
-  "pk_test_51JktFJH7IkGhuWpe7itZiKGgaDMwn2sZGbbdIRsxm8ka8I6uZHAY28HLgBi5XSobhyAWO4674Kev5oImt3eh9SVw00qf1e32SH",
+  "pk_live_51JktFJH7IkGhuWpe9mjCWjoeofyzVsydz5IV1Me7VGTp9x8TOw9GVFRMXxPni6wKArqGPNgmqzZWgLptgywt3PQD00MMcSzpSo",
   {
     locale: "et",
   }
@@ -74,173 +74,218 @@ function currentSelectedTransportName() {
 }
 
 async function updatePrice(e) {
-  document.querySelector("#submitBtn").disabled = true;
+  try {
+    document.querySelector("#submitBtn").disabled = true;
 
-  document.querySelector(".spinner-total-price").classList.remove("hidden");
-  document.querySelector(".total-price-value").style.display = "none";
-  const response = await fetch(
-    `https://laptap.herokuapp.com/payment-intent/prices/${localStorage.getItem(
-      "paymentId"
-    )}`,
-    {
-      method: "POST",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        quantity: currentSelectedQuantity(),
-        transport: currentSelectedTransport(),
-      }),
-    }
-  );
+    document.querySelector(".spinner-total-price").classList.remove("hidden");
+    document.querySelector(".total-price-value").style.display = "none";
 
-  const { unitPrice, productsPrice, quantity, transportPrice, totalPrice } =
-    await response.json();
-  document.querySelector("#submitBtn").disabled = false;
+    const { signal, timeoutId } = createAbortSignal(10000);
+    const response = await fetch(
+      `https://laptap.herokuapp.com/payment-intent/prices/${localStorage.getItem(
+        "paymentId"
+      )}`,
+      {
+        method: "POST",
+        signal,
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          quantity: currentSelectedQuantity(),
+          transport: currentSelectedTransport(),
+        }),
+      }
+    );
+    clearInterval(timeoutId);
 
-  /* FIRST MAKE SURE THERE ARE NO ERRORS */
+    const { unitPrice, productsPrice, quantity, transportPrice, totalPrice } =
+      await response.json();
+    document.querySelector("#submitBtn").disabled = false;
 
-  document.querySelector(".total-price-value").style.display = "inline";
-  document.querySelector(".spinner-total-price").classList.add("hidden");
+    /* FIRST MAKE SURE THERE ARE NO ERRORS */
 
-  productsPriceText(quantity, unitPrice, productsPrice);
-  transportPriceText(transportPrice);
-  totalPriceText(totalPrice);
+    document.querySelector(".total-price-value").style.display = "inline";
+    document.querySelector(".spinner-total-price").classList.add("hidden");
+
+    productsPriceText(quantity, unitPrice, productsPrice);
+    transportPriceText(transportPrice);
+    totalPriceText(totalPrice);
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 async function initialize() {
-  document.querySelector("#submitBtn").disabled = false;
+  try {
+    document.querySelector("#submitBtn").disabled = false;
 
-  document
-    .querySelector(".product-quantity")
-    .addEventListener("change", updatePrice);
+    document
+      .querySelector(".product-quantity")
+      .addEventListener("change", updatePrice);
 
-  setPaymentELLoading(true);
-
-  const response = await fetch("https://laptap.herokuapp.com/payment-intent", {
-    method: "POST",
-    mode: "cors",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      quantity: 1,
-      transport: "",
-    }),
-  });
-
-  const {
-    clientSecret,
-    unitPrice,
-    productsPrice,
-    transportPrice,
-    quantity,
-    totalPrice,
-    id,
-  } = await response.json();
-  localStorage.setItem("paymentId", id);
-  productsPriceText(quantity, unitPrice, productsPrice);
-  transportPriceText(transportPrice);
-  totalPriceText(totalPrice);
-  const appearance = {
-    theme: "stripe",
-    variables: {
-      colorPrimary: "#63d9b6",
-      colorText: "#495057",
-      fontSizeBase: "10px",
-      borderRadius: "5px",
-      fontFamily: "Poppins, sans-serif",
-      fontWeightNormal: 500,
-      spacingUnit: "4px",
-    },
-
-    rules: {
-      ".Label": {
-        fontSize: "1.8rem",
-        fontFamily: "Poppins, sans-serif",
-      },
-      ".Input": {
-        fontSize: "1.8rem",
-        fontFamily: "inherit",
-        transition: "all 0.15s",
-      },
-      ".input:focus": {
-        border: "2px solid #63d9b6",
-      },
-      ".Error": {
-        fontSize: "1.2rem",
-      },
-    },
-  };
-
-  elements = stripe.elements({
-    appearance,
-    clientSecret,
-    fonts: [
+    setPaymentELLoading(true);
+    const { signal, timeoutId } = createAbortSignal(15000);
+    const response = await fetch(
+      "https://laptap.herokuapp.com/payment-intent",
       {
-        cssSrc: "https://fonts.googleapis.com/css2?family=Poppins",
+        method: "POST",
+        mode: "cors",
+        signal,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          quantity: 1,
+          transport: "",
+        }),
+      }
+    );
+
+    clearInterval(timeoutId);
+    const {
+      clientSecret,
+      unitPrice,
+      productsPrice,
+      transportPrice,
+      quantity,
+      totalPrice,
+      id,
+    } = await response.json();
+    localStorage.setItem("paymentId", id);
+    productsPriceText(quantity, unitPrice, productsPrice);
+    transportPriceText(transportPrice);
+    totalPriceText(totalPrice);
+    const appearance = {
+      theme: "stripe",
+      variables: {
+        colorPrimary: "#63d9b6",
+        colorText: "#495057",
+        fontSizeBase: "10px",
+        borderRadius: "5px",
+        fontFamily: "Poppins, sans-serif",
+        fontWeightNormal: 500,
+        spacingUnit: "4px",
       },
-    ],
-  });
 
-  const paymentElement = elements.create("payment");
-  paymentElement.mount("#payment-element");
+      rules: {
+        ".Label": {
+          fontSize: "1.8rem",
+          fontFamily: "Poppins, sans-serif",
+        },
+        ".Input": {
+          fontSize: "1.8rem",
+          fontFamily: "inherit",
+          transition: "all 0.15s",
+        },
+        ".input:focus": {
+          border: "2px solid #63d9b6",
+        },
+        ".Error": {
+          fontSize: "1.2rem",
+        },
+      },
+    };
 
-  paymentElement.on("ready", function () {
-    setPaymentELLoading(false);
-  });
+    elements = stripe.elements({
+      appearance,
+      clientSecret,
+      fonts: [
+        {
+          cssSrc: "https://fonts.googleapis.com/css2?family=Poppins",
+        },
+      ],
+    });
+
+    const paymentElement = elements.create("payment");
+    paymentElement.mount("#payment-element");
+
+    paymentElement.on("ready", function () {
+      setPaymentELLoading(false);
+    });
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 async function handleSubmit(e) {
-  e.preventDefault();
-  const email = document.querySelector("#email").value;
-  const name = document.querySelector("#name").value;
-  const phone = document.querySelector("#phone").value;
+  try {
+    e.preventDefault();
+    const email = document.querySelector("#email").value;
+    const name = document.querySelector("#name").value;
+    const phone = document.querySelector("#phone").value;
+    fetch(
+      `https://laptap.herokuapp.com/payment-intent/metadata/${localStorage.getItem(
+        "paymentId"
+      )}`,
+      {
+        method: "POST",
+        mode: "cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          fullName: name,
+          phone,
+          transport: currentSelectedTransportName(),
+        }),
+      }
+    );
+    setSubmitLoading(true);
 
-  fetch(
-    `https://laptap.herokuapp.com/payment-intent/metadata/${localStorage.getItem(
-      "paymentId"
-    )}`,
-    {
-      method: "POST",
-      mode: "cors",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        email,
-        fullName: name,
-        phone,
-        transport: currentSelectedTransportName(),
-      }),
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        // Make sure to change this to your payment completion page
+        return_url: "https://laptap.herokuapp.com/after-payment",
+        receipt_email: email,
+      },
+    });
+
+    if (error.type === "card_error" || error.type === "validation_error") {
+      setSubmitLoading(false);
+    } else {
+      setSubmitLoading(false);
+
+      showMessage(
+        "Midagi läks valesti",
+        "Palun värskendage lehte, et uuesti proovida."
+      );
     }
-  );
-  setSubmitLoading(true);
-
-  const { error } = await stripe.confirmPayment({
-    elements,
-    confirmParams: {
-      // Make sure to change this to your payment completion page
-      return_url: "https://laptap.herokuapp.com/after-payment",
-    },
-  });
-  if (error.type === "card_error" || error.type === "validation_error") {
-    // showMessage(error.message);
-  } else {
-    //  showMessage("An unexpected error occured.");
+  } catch (e) {
+    showMessage(
+      "Midagi läks valesti",
+      "Palun värskendage lehte, et uuesti proovida."
+    );
+    console.log(e);
   }
 }
 
 // ------- UI helpers -------
 
-function showMessage(messageText) {
-  const messageContainer = document.querySelector("#payment-message");
+function showMessage(heading, message) {
+  const messageContainer = document.querySelector(".error-msg");
 
   messageContainer.classList.remove("hidden");
-  messageContainer.textContent = messageText;
+  messageContainer.querySelector(".error-heading").textContent = heading;
+  messageContainer.querySelector(".error-text").textContent = message;
 
-  setTimeout(function () {
-    messageContainer.classList.add("hidden");
-    messageText.textContent = "";
-  }, 4000);
+  document.querySelector(".ok-btn").addEventListener("click", function () {
+    document.querySelector(".error-msg").classList.add("hidden");
+  });
 }
 
-function fetchWithTimeout(link, timeout) {}
+function createAbortSignal(timeout) {
+  const abortController = new AbortController();
+  const signal = abortController.signal;
+
+  const timeoutId = setTimeout(() => {
+    abortController.abort();
+    console.log("abort");
+    showMessage(
+      "Midagi läks valesti",
+      "Palun värskendage lehte, et uuesti proovida"
+    );
+  }, timeout);
+
+  return { signal, timeoutId };
+}
 
 // Show a spinner on payment submission
 function setPaymentELLoading(isLoading) {
@@ -255,16 +300,23 @@ function setPaymentELLoading(isLoading) {
     document.querySelector("#spinner").classList.add("hidden");
     document.querySelector("#payment-element").classList.remove("hidden");
 
-    // document.querySelector("#button-text").classList.remove("hidden");
+    // document.querySelector("#button-text")f.classList.remove("hidden");
   }
 }
 
 function setSubmitLoading(isLoading) {
+  console.log(isLoading);
   if (isLoading) {
     const submitBtns = document.querySelectorAll(".btn-order-2, .btn-order-1");
     submitBtns.forEach(function (btn) {
       btn.disabled = true;
       btn.style.opacity = 0.6;
+    });
+  } else if (!isLoading) {
+    const submitBtns = document.querySelectorAll(".btn-order-2, .btn-order-1");
+    submitBtns.forEach(function (btn) {
+      btn.disabled = false;
+      btn.style.opacity = 1;
     });
   }
 }

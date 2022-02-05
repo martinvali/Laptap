@@ -66,6 +66,9 @@
 }
 
 @media (min-width: 38.375em) {
+  .error-msg {
+    padding: 6rem 4rem;
+  }
   .navigation-links-container {
     padding-top: 6.4rem;
     padding-bottom: 6.4rem;
@@ -95,7 +98,7 @@
 
   .button-previous,
   .button-next {
-    width: 18px;
+    width: 22px;
   }
 
   .button-previous {
@@ -147,6 +150,9 @@
   .navigation-links-container {
     display: none;
   }
+  .nav {
+    position: relative;
+  }
 
   .navigation-links-desktop {
     display: flex;
@@ -165,6 +171,12 @@
 
   .hero-img-container {
     flex: 1 1 0;
+  }
+
+  .hero-img {
+    width: 100%;
+    max-width: none;
+    margin: 0 0;
   }
   .hero-text-container {
     flex: 1 1 0;
@@ -464,10 +476,6 @@
     font-size: 3.125rem;
   }
 
-  .product-price-savings {
-    font-size: 1.6rem;
-  }
-
   .no-flexbox-gap .gallery {
     /* POLYFILL FOR THE GAP PROPERTY ABOVE */
     margin-right: 4.8rem;
@@ -500,21 +508,22 @@
   }
 
   .footer-contact {
-    gap: 0.8rem;
+    gap: 1rem;
   }
 
   .no-flexbox-gap .footer-contact-icon {
     /* POLYFILL FOR THE GAP PROPERTY ABOVE */
-    margin-right: 0.8rem;
+    margin-right: 1rem;
   }
 
   .footer-container {
-    gap: 0.8rem;
+    gap: 1rem;
   }
 
-  .no-flexbox-gap .footer-text:not(:last-of-type) {
+  .no-flexbox-gap .footer-text:not(:last-of-type),
+  .no-flexbox-gap .footer-contact:not(:last-of-type) {
     /* POLYFILL FOR THE GAP PROPERTY ABOVE */
-    margin-bottom: 0.8rem;
+    margin-bottom: 1rem;
   }
 
   .footer-flex-container {

@@ -1,5 +1,5 @@
 @media (min-width: 47.5em) {
-  header {
+  .error- header {
     padding-top: 2.4rem;
     padding-bottom: 2.4rem;
   }
@@ -12,6 +12,11 @@
 
   .outer-container {
     padding-top: 4.8rem;
+    padding-bottom: 3.2rem;
+  }
+
+  .header {
+    padding-top: 3.2rem;
     padding-bottom: 3.2rem;
   }
 }
@@ -45,16 +50,25 @@
     align-self: flex-end;
   }
 
-  .btn-order-1 {
+  .btn-order-1,
+  .climate-text-container.climate-text-container-1 {
     display: block;
   }
+  .climate-text-container.climate-text-container-1 {
+    display: flex;
+  }
 
-  .btn-order-2 {
+  .btn-order-2,
+  .climate-text-container-2.climate-text-container {
     display: none;
   }
 
   .total-price {
     margin-bottom: 2.4rem;
+  }
+  .header {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 

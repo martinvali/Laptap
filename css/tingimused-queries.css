@@ -1,0 +1,47 @@
+@media (min-width: 47.5em) {
+  html {
+    font-size: 70%;
+  }
+  .heading-secondary {
+    margin-bottom: 3.2rem;
+  }
+  .header {
+    padding-top: 3.2rem;
+    padding-bottom: 3.2rem;
+  }
+}
+
+@media (min-width: 62.5em) {
+  .btn-back img {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
+
+  .btn-back {
+    margin-right: 3.2rem;
+  }
+  .heading-primary {
+    font-size: 3.106rem;
+  }
+  .header {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+  .main {
+    padding-top: 4.8rem;
+  }
+}
+
+@media (min-width: 75em) {
+  header .max-width-container {
+    padding-left: 2.5rem;
+  }
+
+  .max-width-container {
+    margin: 0 auto;
+  }
+
+  html {
+    font-size: 75%;
+  }
+}

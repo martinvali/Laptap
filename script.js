@@ -1,13 +1,41 @@
+import smoothscroll from "smoothscroll-polyfill";
 import Glide from "@glidejs/glide";
 import Accordion from "accordion-js";
 import { Anchors, Autoplay } from "@glidejs/glide/dist/glide.modular.esm";
-window.__forceSmoothScrollPolyfill__ = true;
 
-import smoothscroll from "smoothscroll-polyfill";
-
+const smoothAnchorClasses = [
+  ".navigation-link-desktop:nth-of-type(1) .navigation-link-anchor-desktop",
+  ".navigation-link-desktop:nth-of-type(2) .navigation-link-anchor-desktop",
+  ".navigation-link-desktop:nth-of-type(3) .navigation-link-anchor-desktop",
+  ".navigation-link-desktop:nth-of-type(4) .navigation-link-anchor-desktop",
+  ".navigation-link-desktop:nth-of-type(5) .navigation-link-anchor-desktop",
+  ".navigation-link:nth-of-type(1) .navigation-link-anchor",
+  ".navigation-link:nth-of-type(2) .navigation-link-anchor",
+  ".navigation-link:nth-of-type(3) .navigation-link-anchor",
+  ".navigation-link:nth-of-type(4) .navigation-link-anchor",
+  ".navigation-link:nth-of-type(5) .navigation-link-anchor",
+  ".btn-primary",
+  ".btn-secondary",
+  ".kkk",
+];
 smoothscroll.polyfill();
-console.log("Polyfill");
+smoothAnchorClasses.forEach(function (className) {
+  document.querySelector(className).addEventListener("click", function (e) {
+    document
+      .querySelector(e.target.dataset.navigateto)
+      .scrollIntoView({ behavior: "smooth" });
+  });
+});
 
+/*document
+  .querySelector(".navigation-link-anchor-desktop")
+  .forEach(function (el) {
+    el.addEventListener("click", function () {
+      document
+        .querySelector(el.dataset.navigateto)
+        .scrollIntoView({ behaviour: "smooth" });
+    });
+  });*/
 // Fixing flexbox gap property missing in some Safari versions
 
 function checkFlexGap() {
@@ -60,7 +88,7 @@ function faqArrowOpen(element) {
   element.querySelector(".faq-arrow").style.animation =
     "openAnimation 0.2s linear";
   element.querySelector(".faq-question").style.backgroundColor = "#F9FAF8";
-  element.querySelector("");
+  element.querySelector(".ac-panel").style.marginTop = "0.8rem";
 }
 
 function faqArrowClose(element) {
@@ -69,14 +97,10 @@ function faqArrowClose(element) {
   element.querySelector(".faq-question").style.backgroundColor = "#EDEDED";
 }
 
-function anchorScrollTo() {
-  document.querySelectorAll("[data-navigateTo]").forEach(function (e) {
-    e.addEventListener("click", function (e) {
-      document
-        .querySelector(e.target.dataset.navigateto)
-        .scrollIntoView({ behaviour: "smooth" });
-    });
-  });
+function anchorScrollTo() {}
+
+function removeAnswerMarginTop(element) {
+  element.querySelector(".ac-panel").style.marginTop = "0";
 }
 
 anchorScrollTo();
@@ -89,6 +113,7 @@ const glider = new Glide(".glide", {
   animationDuration: 800,
   autoplay: 5000,
   hoverpause: true,
+  focusAt: "center",
 }).mount({ Autoplay });
 
 setTimeout(() => {
@@ -99,4 +124,5 @@ new Accordion(".accordion-container", {
   duration: 200,
   beforeOpen: faqArrowOpen,
   beforeClose: faqArrowClose,
+  onClose: removeAnswerMarginTop,
 });

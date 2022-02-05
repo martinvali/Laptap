@@ -129,13 +129,70 @@ section.outer-container {
   padding-bottom: 2rem;
 }
 
-.btn-order-1 {
+.btn-order-1,
+.climate-text-container-1.climate-text-container {
   display: none;
 }
 
 .btn-order-2 {
   margin-top: 2.4rem;
   display: block;
+}
+
+.error-msg.hidden {
+  display: none;
+}
+.error-msg {
+  position: fixed;
+  padding: 4.2rem 2.4rem;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  background-color: #e9f7f3;
+  border-radius: 10px;
+  left: 50%;
+  width: 90%;
+  max-width: 600px;
+  z-index: 9999;
+}
+
+.error-heading {
+  font-size: 2.5rem;
+  color: #0ca678;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.8rem;
+  z-index: 9999;
+}
+
+.error-text {
+  font-size: 2rem;
+  color: #495057;
+  font-weight: 500;
+  text-align: center;
+  z-index: 9999;
+  margin-bottom: 2.4rem;
+}
+
+.ok-btn {
+  padding: 0.4rem 2rem;
+  background-color: #087f5b;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  padding: 0.6rem 4.8rem;
+  display: block;
+  margin: auto;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border-radius: 5px;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+
+.ok-btn:hover {
+  background-color: #0ca678;
+  border-color: #0ca678;
+  color: #f4fdfa;
 }
 
 /* HEADER */
@@ -339,28 +396,43 @@ select:focus,
   border-radius: 5px;
   transition: all 0.25s;
   position: relative;
+  margin-bottom: 2rem;
 }
+
+.stripe-climate-logo-text {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+
 .climate-text-container {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .climate-text-container .img-container {
-  width: 3rem;
+  width: 2.5rem;
   margin-right: 0.6rem;
   display: flex;
   align-items: center;
 }
 
-.climate-text {
+.climate-text,
+.climate-text-secondary {
+  text-align: center;
   font-size: 1.28rem;
   font-weight: 600;
   color: #495057;
+  margin-bottom: 1.2rem;
 }
 
-.btn-order-1:hover,
-.btn-order-2:hover {
+.climate-text-secondary {
+  margin-bottom: 0;
+}
+.btn-order-1:hover:not([disabled]),
+.btn-order-2:hover:not([disabled]) {
   color: #fff;
   background-color: #087f5b;
 }

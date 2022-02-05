@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Õpilasfirma Laptap</title>
+    <title>Laptap - kokkuvolditavad eestimaised sülearvutilauad</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    
@@ -15,7 +15,7 @@
 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/general.css" />
-    <link rel="stylesheet" href="css/queries.css" />
+    <link rel="stylesheet" href="css/queries.css" media="screen and (min-device-width:376px)" />
     
 
     <link
@@ -24,17 +24,15 @@
   />
 
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2abc73">
-<meta name="apple-mobile-web-app-title" content="Laptap">
-<meta name="application-name" content="Laptap">
-<meta name="msapplication-TileColor" content="#00a300">
-<meta name="theme-color" content="#ffffff">
-    <script defer type="module" src="./dist/index.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bd5ad">
+  <meta name="msapplication-TileColor" content="#00a300">
+  <meta name="theme-color" content="#e9f7f3">
+  <script defer type="module" src="./dist/index.js"></script>
 
-    
+  <meta name="description" content="Laptapi eestimaised ning kokkuvolditavad sülearvutilauad hoiavad ära sülearvuti ülekuumenemise, määrdumise ning aitavad kokku hoida arvutiga seotud hoolduskuludelt.">
   </head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WW93HHTRXD"></script>
 <script>
@@ -126,17 +124,28 @@
               vähenemise eest. Hoidke kokku hoolduskuludelt.
             </p>
 
-            <a data-navigateTo="#tellima"" class="btn-primary">Tellima</a>
-            <a data-navigateTo="#tellima"" class="btn-secondary">Galerii</a>
+            <a data-navigateTo="#tellima" class="btn-primary">Tellima</a>
+            <a data-navigateTo="#tellima" class="btn-secondary">Galerii</a>
           </div>
           <div class="hero-img-container">
-            <img
+            <picture>
+              <source type="image/webp" srcset="hero.webp">
+              <img
               class="hero-img"
-              src="hero.jpg"
+              src="hero.png"
               alt="Pilt meie sülearvutilauast"
-            />
+              />
+          </picture>
+
+            <img
+            class="gradient-bg-img"
+            src="gradient-bg.webp"
+            alt="Gradient background"
+          />
+          
           </div>
         </div>
+        
       </section>
 
       <section
@@ -148,17 +157,18 @@
           <h2 class="heading-secondary">Meie õpilasfirmast</h2>
           <div class="about-flex">
             <div class="about-img-container">
+              <picture>
+              <source type="image/webp" srcset="of_group.webp">
               <img
                 class="about-img"
-                src="hero.jpg"
+                src="of_group.png"
+                loading="lazy"
                 alt="Pilt meie sülearvutilauast"
               />
+            </picture>
             </div>
             <p class="about-paragraph">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
-              numquam ab ea libero. Cumque impedit iste consequuntur excepturi
-              provident nihil nobis porro commodi.
+             Tere! Meie õpilasfirma liikmeteks on neli usinat Tallinna Lilleküla Gümnaasiumi 11.a klassi õpilast: Greteli, Karmely, Aron ja Martin. Idee hakata tootma sülearvutilaudu tekkis probleemist, et arvuti kasutamine voodis ja õues on ebamugav. Seega otsustasimegi hakata valmistama laudu, mis parandaksid sülearvuti kasutusmugavust. Lisaks suurepärasele disainile on meie sülearvutid ka kokkuvolditavad, tänu millele mahuvad lauad probleemideta kotti või riiulile. Pingutame täiest väest, et muuta meie tooted võimalikult keskkonnasõbralikuks, ning panustame rahaliselt ka kliimasoojenemise pidurdamiseks läbi Stripe climate programmi.
             </p>
           </div>
         </div>
@@ -212,8 +222,7 @@
               <div class="feature-card-text">
                 <p class="feature-card-heading">Keskkonnasõbralik</p>
                 <p class="feature-card-description">
-                  Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
-                  läinud äraviskamisele.
+                  Annetame igalt ostult 1% Stripe Climate programmi raames kliimasoojenemise pidurdamiseks.
                 </p>
               </div>
             </div>
@@ -236,14 +245,13 @@
             <div class="feature-card">
               <img
                 class="feature-card-icon"
-                src="leaf.svg"
+                src="mahukas.svg"
                 alt="Environmentally-friendly icon"
               />
               <div class="feature-card-text">
-                <p class="feature-card-heading">Keskkonnasõbralik</p>
+                <p class="feature-card-heading">Mahukas</p>
                 <p class="feature-card-description">
-                  Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
-                  läinud äraviskamisele.
+                 Laud on sobilik kuni 17.6-tollistele sülearvutitele. Lisaks sellele mahub lauale arvuti kõrvale ka hiir.
                 </p>
               </div>
             </div>
@@ -251,14 +259,13 @@
             <div class="feature-card">
               <img
                 class="feature-card-icon"
-                src="leaf.svg"
+                src="versatile.svg"
                 alt="Environmentally-friendly icon"
               />
               <div class="feature-card-text">
-                <p class="feature-card-heading">Keskkonnasõbralik</p>
+                <p class="feature-card-heading">Mitmekülgne</p>
                 <p class="feature-card-description">
-                  Lauad valmivad vineerijääkidest, mis oleksid vastasel juhul
-                  läinud äraviskamisele.
+                  Lauda on võimalik kasutada ka muudeks otstarveteks, näiteks kirjutamiseks või voodis söögialusena.
                 </p>
               </div>
             </div>
@@ -277,12 +284,9 @@
           <div class="producing-container">
             <div class="producing-step">
               <p class="producing-step-number">01</p>
-              <p class="producing-step-heading">Materjali valimine</p>
+              <p class="producing-step-heading">Freesimine</p>
               <p class="producing-step-description">
-                Valime teie laua jaoks välja sobivad vineeritükid. Kasutame
-                võimalikult suures osas vineerijääke, mis on kvaliteedilt
-                võrdsed uuele vineerile, kuid mis oleksid vastasel juhul läinud
-                äraviskamisele.
+                Esimesena läbivad lauad CNC-freesimise ja laserlõikuse, kus vineerile antakse kuju. Pärast freesimist graveeritakse teie lauale ka logo.
               </p>
             </div>
 
@@ -290,8 +294,7 @@
               <p class="producing-step-number">02</p>
               <p class="producing-step-heading">Töötlus</p>
               <p class="producing-step-description">
-                Vineeritükid läbivad CNC freesimise ja laserlõikuse. (lakk, õli
-                värv vms teeme ka?).
+                Teie laud transporditakse meie töökotta, kus vineer lihvitakse ning jalad hööveldatakse, et valmistada lauad ette monteerimiseks.
               </p>
             </div>
 
@@ -299,9 +302,7 @@
               <p class="producing-step-number">03</p>
               <p class="producing-step-heading">Monteerimine</p>
               <p class="producing-step-description">
-                Lõigatud vineeritükid monteeritakse käsitsi meie õpilasfirma
-                liikmete poolt. Seejärel toimub toote kvaliteedikontroll ning
-                toode pakendatakse.
+                Töödeldud vineeritükid monteeritakse käsitsi meie õpilasfirma liikmete poolt. Teie lauale kinnitatakse kruvidega hinged ning antakse viimane lihv.
               </p>
             </div>
 
@@ -309,8 +310,7 @@
               <p class="producing-step-number">04</p>
               <p class="producing-step-heading">Müük ja transport</p>
               <p class="producing-step-description">
-                Teie laud on valmis kasutamiseks ning transporditakse soovitud
-                asukohta.
+                Tooted läbivad kvaliteedikontrolli ning katsetused. Seejärel pakendatakse teie laud biolagunevasse pappkarpi, mille leiate juba paari päeva pärast pakiautomaadist.
               </p>
             </div>
           </div>
@@ -327,21 +327,57 @@
               <div class="glide__track" data-glide-el="track">
                 <ul class="glide__slides">
                   <li>
+                    <picture>
+                    <source type="image/webp" srcset="1.webp">
                     <img
                       class="product-img"
                       data-index="1"
-                      src="hero.jpg"
+                      loading="lazy"
+                      src="1.png"
                       alt="Pilt meie sülearvutilauast"
                     />
+                  </picture>
                   </li>
                   <li>
-                    <img
-                      class="product-img"
-                      data-index="2"
-                      src="hero.jpg"
-                      alt="Pilt meie sülearvutilauast"
-                    />
+                    <picture>
+                      <source type="image/webp" srcset="3.webp">
+
+                      <img
+                        class="product-img"
+                        data-index="2"
+                        loading="lazy"
+                        src="3.png"
+                        alt="Pilt meie sülearvutilauast"
+                      />
+                    </picture>
                   </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="5.webp">
+
+                      <img
+                        class="product-img"
+                        data-index="3"
+                        loading="lazy"
+                        src="5.png"
+                        alt="Pilt meie sülearvutilauast"
+                      />
+                    </picture>
+                  </li>
+                  <li>
+                    <picture>
+                      <source type="image/webp" srcset="6.webp">
+
+                      <img
+                        class="product-img"
+                        data-index="4"
+                        loading="lazy"
+                        src="6.png"
+                        alt="Pilt meie sülearvutilauast"
+                      />
+                    </picture>
+                  </li>
+                  
                 </ul>
               </div>
               <div class="glide-controls" data-glide-el="controls">
@@ -363,18 +399,14 @@
             </div>
           </div>
           <div class="product-text">
-            <h2 class="product-title">Sülearvutilaud</h2>
+            <h2 class="product-title">Volditav sülearvutilaud</h2>
             <p class="product-description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Laud sobib ka kõige suurematele, 17.6-tollistele sülearvutitele. Volditult on laud natukene suurem kui A4 paberileht. Ainukene eestimaine variant turul! Õhuaugud tagavad arvutile hea jahutuse ning laud kaitseb arvutit ka määrdumise ja eluea vähenemise eest. Sobilik ka muudeks otstarveteks, näiteks söögi- või kirjutusalusena pehmel pinnal.
             </p>
             <div class="product-prices">
               <p class="product-price">
-                50€<span class="product-price-light">/laud</span>
+                45€<span class="product-price-light">/laud</span>
               </p>
-              <p class="product-price-savings">Säästa laadahinnast x%</p>
             </div>
           <form action="/checkout.html" method="GET">
             <button class="btn-order" type="submit">Tellima</button>
@@ -382,7 +414,7 @@
             <p class="order-info">
               Hinnale võib lisanduda transpordikulu. Lisainfo:&nbsp;<a
                 class="kkk"
-                href="#kkk"
+                data-navigateto="#kkk"
                 >KKK</a
               >
             </p>
@@ -432,6 +464,23 @@
                 <button class="faq-question ac-trigger">
                   <div class="faq-question-flex">
                     <p class="faq-question-title ac-header">
+                    Kui palju maksab laua transport?
+                    </p>
+                    <img
+                      src="downarrow.svg"
+                      alt="Downarrow to open a frequently asked question."
+                      class="faq-arrow"
+                    />
+                  </div>
+                  <p class="faq-answer hidden ac-panel">
+                    Laua transport maksab 4.5€. Tellimust vormistades on aga võimalik kõige esimese variandina valida tasuta kohaletoimetamine, mille puhul saab tulla ise tellimusele järgi Tallinna Lilleküla Gümnaasiumisse. Selle ja ka teiste transpordiviiside valimisel võetakse teiega pärast tellimust ühendust, et täpsustada kohaletoimetamise aega.
+                  </p>
+                </button>
+              </div>
+              <div class="ac">
+                <button class="faq-question ac-trigger">
+                  <div class="faq-question-flex">
+                    <p class="faq-question-title ac-header">
                     Mis saab minu andmetest pärast tellimuse esitamist?
                     </p>
                     <img
@@ -449,7 +498,7 @@
                 <button class="faq-question ac-trigger">
                   <div class="faq-question-flex">
                     <p class="faq-question-title ac-header">
-                      Kui kaua aega kulub toote transpordiks?
+                     Millised on laua mõõdud?
                     </p>
                     <img
                       src="downarrow.svg"
@@ -458,10 +507,7 @@
                     />
                   </div>
                   <p class="faq-answer hidden ac-panel">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Incidunt, molestias. Veniam eaque molestiae odio itaque quo,
-                    numquam ab ea libero. Cumque impedit iste consequuntur
-                    excepturi provident nihil nobis porro commodi.
+                    Laua mõõdud on lahtiselt 60 x 32 cm ning kõrguseks on 20cm. Volditult on laua mõõdud 30 x 32 x 4cm, mis on ainult natukene suurem kui A4 paberileht. Lauale mahuvad ka kõige suuremad, 17.6-tollised sülearvutid. Lisaks sellele mahub arvuti kõrvale ka hiir.
                   </p>
                 </button>
               </div>
@@ -470,7 +516,11 @@
             <p class="faq-text">
               Kui su küsimus jääb vastuseta,
               <span class="faq-text-green"
-                >võta meiega julgelt ühendust telefonil x või emailil x.</span
+                >võta meiega julgelt ühendust telefonil <a class="faq-phone-nr" href="tel:+37256819755"
+                >56819755</a
+              > või emailil <a class="faq-gmail" href="mailto:opilasfirma.laptap@gmail.com"
+              >opilasfirma.laptap@gmail.com</a
+            ></span
               >
             </p>
         </div>
@@ -484,22 +534,15 @@
 
         <div class="footer-flex-container">
           <div class="footer-container">
-            <div class="footer-contact">
-              <img
-                src="school.svg"
-                class="footer-contact-icon"
-                alt="school icon"
-              />
-              <p class="footer-text">Tallinna Lilleküla Gümnaasium</p>
-            </div>
+            
             <div class="footer-contact">
               <img
                 src="call.svg"
                 class="footer-contact-icon"
                 alt="phone icon"
               />
-              <a class="footer-text" href="tel:+37256843090"
-                >+372 595 959 595</a
+              <a class="footer-text" href="tel:+37256819755"
+                >+372 56819755</a
               >
             </div>
             <div class="footer-contact">
@@ -508,13 +551,33 @@
                 class="footer-contact-icon"
                 alt="email icon"
               />
-              <a class="footer-text" href="mailto:tere@laptap.com"
-                >tere@laptap.com</a
+              <a class="footer-text" href="mailto:opilasfirma.laptap@gmail.com"
+                >opilasfirma.laptap@gmail.com</a
+              >
+            </div>
+            <div class="footer-contact">
+              <img
+                src="instagram.svg"
+                class="footer-contact-icon"
+                alt="email icon"
+              />
+              <a class="footer-text" href="https://www.instagram.com/of.laptap/"
+                >of.laptap</a
+              >
+            </div>
+            <div class="footer-contact">
+              <img
+                src="facebook.svg"
+                class="footer-contact-icon"
+                alt="email icon"
+              />
+              <a class="footer-text" href="https://www.facebook.com/oflaptap"
+                >Õf Laptap</a
               >
             </div>
           </div>
           <div class="footer-container">
-            <a href="#" class="footer-text">Müügi- ja tagastustingimused</a>
+            <a href="tingimused.html" class="footer-text">Müügi- ja tagastustingimused</a>
             <a href="#" class="footer-text">Privaatsuspoliitika</a>
           </div>
           <p class="footer-text">
