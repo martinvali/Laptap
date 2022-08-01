@@ -238,6 +238,10 @@ header .max-width-container {
 }
 
 #omniva_select2 {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
   width: 90%;
   font-family: inherit;
   font-size: 1.5rem;
@@ -245,6 +249,10 @@ header .max-width-container {
   padding: 12px;
   border: 1px solid #e6e6e6;
   background: transparent;
+  background-image: url(../arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: 97% center;
+  background-size: 13px;
 }
 
 td.ow_td:first-of-type {
@@ -321,6 +329,7 @@ select:focus,
 .product-text-flex-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .product-title {
   font-size: 1.6rem;
@@ -331,15 +340,23 @@ select:focus,
 
 .product-quantity {
   font-weight: 600;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   font-family: inherit;
   font-size: 1.6rem;
   border-radius: 5px;
-  padding: 2px;
+  padding: 5px;
+  min-width: 38px;
   border: none;
   background: transparent;
+  background-image: url(../arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: 85% center;
+  background-size: 12px;
 }
 
-.product-price {
+.product-card-price {
   font-weight: 500;
   font-size: 1.6rem;
 }
@@ -416,6 +433,9 @@ select:focus,
   font-size: 1.5rem;
   border-radius: 5px;
   padding: 12px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   border: 1px solid #e6e6e6;
   background: transparent;
   width: 100%;
