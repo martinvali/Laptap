@@ -90,7 +90,7 @@ function currentSelectedTransportName() {
   return omnivaSelect.options[omnivaSelect.selectedIndex].innerText || "";
 }
 
-async function updatePrice(e) {
+async function updatePrice() {
   try {
     document.querySelector("#submitBtn").disabled = true;
 
@@ -118,8 +118,6 @@ async function updatePrice(e) {
     const { unitPrice, productsPrice, quantity, transportPrice, totalPrice } =
       await response.json();
     document.querySelector("#submitBtn").disabled = false;
-
-    /* FIRST MAKE SURE THERE ARE NO ERRORS */
 
     document.querySelector(".total-price-value").style.display = "inline";
     document.querySelector(".spinner-total-price").classList.add("hidden");
