@@ -249,7 +249,7 @@ header .max-width-container {
   padding: 12px;
   border: 1px solid #e6e6e6;
   background: transparent;
-  background-image: url(../arrow-down.svg);
+  background-image: url(../icons/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: 97% center;
   background-size: 13px;
@@ -350,7 +350,7 @@ select:focus,
   min-width: 38px;
   border: none;
   background: transparent;
-  background-image: url(../arrow-down.svg);
+  background-image: url(../icons/arrow-down.svg);
   background-repeat: no-repeat;
   background-position: 85% center;
   background-size: 12px;
