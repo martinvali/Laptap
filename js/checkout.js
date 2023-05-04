@@ -1,5 +1,5 @@
 const stripe = Stripe(
-  "pk_live_51JktFJH7IkGhuWpe9mjCWjoeofyzVsydz5IV1Me7VGTp9x8TOw9GVFRMXxPni6wKArqGPNgmqzZWgLptgywt3PQD00MMcSzpSo",
+  "pk_test_51JktFJH7IkGhuWpe7itZiKGgaDMwn2sZGbbdIRsxm8ka8I6uZHAY28HLgBi5XSobhyAWO4674Kev5oImt3eh9SVw00qf1e32SH",
   {
     locale: "et",
   }
@@ -99,7 +99,7 @@ async function updatePrice() {
 
     const { signal, timeoutId } = createAbortSignal(10000);
     const response = await fetch(
-      `https://laptap.herokuapp.com/payment-intent/prices/${localStorage.getItem(
+      `https://laptap-backend.onrender.com/payment-intent/prices/${localStorage.getItem(
         "paymentId"
       )}`,
       {
@@ -141,7 +141,7 @@ async function initialize() {
     setPaymentELLoading(true);
     const { signal, timeoutId } = createAbortSignal(15000);
     const response = await fetch(
-      "https://laptap.herokuapp.com/payment-intent",
+      "https://laptap-backend.onrender.com/payment-intent",
       {
         method: "POST",
         mode: "cors",
@@ -228,7 +228,7 @@ async function checkDiscount(e) {
 
     const { signal, timeoutId } = createAbortSignal(10000);
     const response = await fetch(
-      `https://laptap.herokuapp.com/discount-code/${localStorage.getItem(
+      `https://laptap-backend.onrender.com/discount-code/${localStorage.getItem(
         "paymentId"
       )}`,
       {
@@ -278,7 +278,7 @@ async function handleSubmit(e) {
     const name = document.querySelector("#name").value;
     const phone = document.querySelector("#phone").value;
     fetch(
-      `https://laptap.herokuapp.com/payment-intent/metadata/${localStorage.getItem(
+      `https://laptap-backend.onrender.com/payment-intent/metadata/${localStorage.getItem(
         "paymentId"
       )}`,
       {
@@ -298,8 +298,7 @@ async function handleSubmit(e) {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        // Make sure to change this to your payment completion page
-        return_url: "https://laptap.herokuapp.com/after-payment",
+        return_url: "https://laptap-backend.onrender.com/after-payment",
         receipt_email: email,
       },
     });
