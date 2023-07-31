@@ -132,6 +132,10 @@ header .max-width-container {
   display: block;
 }
 
+.navigation-link-cta .navigation-link-anchor:hover {
+  color: white;
+}
+
 .navigation-links-desktop {
   display: none;
   flex-direction: row;
